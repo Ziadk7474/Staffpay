@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f7f8fb">
 <title>StaffPay</title>
+	<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f6f7fa">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 :root{--ink:#15171c;--ink-soft:#343840;--muted:#8b909b;--muted-2:#a9adb6;--line:rgba(26,31,42,.08);--line-strong:rgba(26,31,42,.13);--blue:#1769e0;--blue-dark:#075bd0;--blue-soft:#edf4ff;--blue-wash:#f5f8ff;--green:#1b9c68;--red:#c84b57;--bg:#f6f7fa;--white:#fff;--radius:22px;--shadow:0 12px 38px rgba(25,33,52,.045);--shadow-hover:0 16px 42px rgba(25,33,52,.085)}
 *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:radial-gradient(circle at 72% -12%,#fff 0,#f7f8fb 35%,var(--bg) 70%);color:var(--ink);font:15px -apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.15px}button,input,select,textarea{font:inherit}button{transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}button:active{transform:scale(.98)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(23,105,224,.22);outline-offset:2px}
@@ -91,5 +95,12 @@ $("stmtEmp").onchange=statement;$("month").onchange=statement;$("year").onchange
 let d=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];$("month").innerHTML=months.map((m,i)=>`<option value="${String(i+1).padStart(2,"0")}">${m}</option>`).join("");$("month").value=String(d.getMonth()+1).padStart(2,"0");$("year").innerHTML=Array.from({length:11},(_,i)=>d.getFullYear()-5+i).map(y=>`<option>${y}</option>`).join("");$("year").value=d.getFullYear();$("payDate").value=today();load();render();
 })();
 </script>
+	<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js");
+    });
+}
+	</script>
 </body>
 </html>
