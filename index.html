@@ -108,6 +108,45 @@ nav button{font-weight:500}#sync{font-weight:500}dialog h3{font-weight:600}.mn b
  #stmt.on{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;align-items:start}
  #stmt>h2,#stmt>.sub,#stmt>#sHero,#stmt>#sRows,#stmt>.two{grid-column:1/-1}#stmt>.fld{margin:0 0 14px}#stmt>.two{max-width:520px}
 }
+
+.link{cursor:pointer}.link:active{transform:scale(.98)}
+.bars div[data-d]{cursor:pointer}.bars div[data-d]:active b{opacity:.6}
+.seg{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}.seg button{flex:none;padding:9px 14px;border-radius:99px;background:#fff;box-shadow:var(--sh);font-size:13px;color:#59627a}.seg .on{background:var(--blue);color:#fff}
+.chips button.sel{background:var(--blue);color:#fff}
+#toast{max-width:92vw;text-align:center}#toast button{background:none;color:#7fb2ff;font-weight:600;margin-left:14px;padding:0}
+#dayRows{max-height:52vh;overflow:auto}
+@media(min-width:960px){#stmt>.seg,#stmt>#sDate,#stmt>.mn{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}
+.a.bad{color:var(--bad)}mark{background:#dbe9ff;color:inherit;border-radius:3px}
+.pl{background:#fff;border-radius:16px;border:1px solid var(--bd);box-shadow:var(--sh);max-height:260px;overflow:auto;padding:0 12px}.pl .row{cursor:pointer}.pl .row:hover{background:var(--soft)}
+.ib.warn{background:#fdecee;color:var(--bad)}
+html.rm *,html.rm ::before,html.rm ::after{animation:none!important;transition:none!important}
+#prt{display:none}
+@media(min-width:960px){#stmt>#sCat{grid-column:1/-1}}
+@media print{@page{margin:14mm}main,dialog,#toast,#stmt{display:none!important}body{background:#fff;padding:0!important}#prt{display:block;font:12px/1.45 Inter,Arial,sans-serif;color:#111}
+#prt .ph{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #111;padding-bottom:10px;margin-bottom:14px}#prt .pb{font-size:20px;font-weight:700}#prt .ps{color:#555;margin-top:2px}#prt .pd{color:#666;font-size:11px;text-align:right}
+#prt .pm{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}#prt .pm span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#777}
+#prt table{width:100%;border-collapse:collapse}#prt th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#555;border-bottom:1px solid #111;padding:6px 8px}#prt td{padding:7px 8px;border-bottom:1px solid #e3e3e3}#prt .r{text-align:right!important;font-variant-numeric:tabular-nums}#prt thead{display:table-header-group}#prt tr{break-inside:avoid}
+#prt .tot{margin:16px 0 0 auto;width:56%;break-inside:avoid}#prt .tot div{display:flex;justify-content:space-between;padding:4px 0}#prt .tot .g{border-top:2px solid #111;font-size:15px;font-weight:700;margin-top:4px;padding-top:8px}
+#prt h4{margin:18px 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#555}
+#prt .sg{display:flex;gap:40px;margin-top:56px;break-inside:avoid}#prt .sg div{flex:1;border-top:1px solid #111;padding-top:4px;color:#555;font-size:11px}#prt .fn{margin-top:18px;color:#888;font-size:10px}
+#prt .rc{max-width:440px;margin:0 auto;border:1px solid #111;padding:22px}#prt .amt2{font-size:30px;font-weight:700;margin:6px 0 10px}}
+.gear{background:none;color:var(--tx);width:40px;height:40px;display:grid;place-items:center;border-radius:12px;padding:0}.gear .ic{width:22px;height:22px}.gear:active{opacity:.45}
+#sync{width:fit-content}
+.bars{height:108px}.bars .bv{font-size:9.5px;color:#fff;opacity:.9;height:11px;font-weight:500;letter-spacing:0}
+body{font-feature-settings:"tnum","cv11"}
+.card{border-radius:26px;box-shadow:0 1px 2px rgba(17,22,31,.04),0 20px 44px rgba(23,60,120,.07)}
+.hero::after{content:"";position:absolute;width:240px;height:240px;right:-70px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.24),transparent 70%);pointer-events:none}
+.btn.p{background:linear-gradient(180deg,#3485f2,#1262d7);box-shadow:0 12px 26px rgba(23,105,224,.3),inset 0 1px 0 rgba(255,255,255,.28)}
+.row.link:active{background:var(--s2);border-radius:14px}
+nav{background:rgba(17,22,31,.8);backdrop-filter:blur(26px) saturate(1.8);-webkit-backdrop-filter:blur(26px) saturate(1.8);border:1px solid rgba(255,255,255,.09)}
+nav button.on{background:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+dialog[open]{animation:sheet .26s cubic-bezier(.2,.8,.2,1)}dialog[open]::backdrop{animation:fade .2s ease}
+@keyframes sheet{from{opacity:0;transform:translateY(28px)}}@keyframes fade{from{opacity:0}}@keyframes tin{from{opacity:0;transform:translate(-50%,10px)}}
+#toast{background:rgba(17,22,31,.92);backdrop-filter:blur(14px);box-shadow:0 14px 34px rgba(17,22,31,.3);animation:tin .18s ease}
+::-webkit-scrollbar{width:0;height:0}
+@media(min-width:960px){nav{background:#fff;backdrop-filter:none;border:0;border-right:1px solid var(--bd)}nav button.on{background:var(--soft);box-shadow:none}}
+.logo i{background:none;box-shadow:0 5px 14px rgba(10,63,156,.35);overflow:hidden;width:34px;height:34px;border-radius:11px}.logo i svg{width:100%;height:100%;stroke:none;display:block}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-logo" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H17v3"/><path d="M4 7.5V17a2 2 0 0 0 2 2h12a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 18 8H6.5A2.5 2.5 0 0 1 4 7.5Z"/><circle cx="15.5" cy="13.5" r=".6"/></symbol>
@@ -124,118 +163,196 @@ nav button{font-weight:500}#sync{font-weight:500}dialog h3{font-weight:600}.mn b
 <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5V9h14v8h-2M7 14h10v6H7z"/></symbol>
 <symbol id="i-send" viewBox="0 0 24 24"><path d="M20 4 10.500 13.500M20 4l-6 16-3.500-6.500L4 10z"/></symbol>
 <symbol id="i-csv" viewBox="0 0 24 24"><path d="M5 5h14v14H5zM5 10h14M10 10v9"/></symbol>
-</defs></svg>
-<header><div class="logo"><i><svg class="ic"><use href="#i-logo"/></svg></i>StaffPay</div><span id="sync">Connecting…</span></header>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol></defs></svg>
+<header><div class="logo"><i><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="lgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c9cff"/><stop offset=".5" stop-color="#1769e0"/><stop offset="1" stop-color="#082f78"/></linearGradient><radialGradient id="lgh" cx=".85" cy=".05" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".34"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" fill="url(#lgb)"/><rect width="512" height="512" fill="url(#lgh)"/><g transform="translate(256 256) scale(1) translate(-256 -266)"><defs>
+<linearGradient id="lgw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d3e3ff"/></linearGradient>
+<linearGradient id="lgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#bcd6ff" stop-opacity=".85"/></linearGradient>
+<linearGradient id="lgt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a8bf5"/><stop offset="1" stop-color="#0a4fb8"/></linearGradient>
+<linearGradient id="lgc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#f0a21a"/></linearGradient>
+<filter id="lsh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#021a4a" flood-opacity=".38"/></filter></defs>
+<g transform="rotate(-9 256 190)"><rect x="150" y="104" width="212" height="150" rx="20" fill="url(#lgn)" opacity=".55"/></g>
+<g transform="rotate(5 256 190)"><rect x="150" y="116" width="212" height="150" rx="20" fill="url(#lgn)"/><rect x="168" y="134" width="176" height="114" rx="12" fill="none" stroke="#1769e0" stroke-opacity=".28" stroke-width="5"/><circle cx="256" cy="191" r="26" fill="none" stroke="#1769e0" stroke-opacity=".3" stroke-width="5"/></g>
+<g filter="url(#lsh)"><rect x="112" y="190" width="288" height="206" rx="46" fill="url(#lgw)"/></g>
+<rect x="128" y="206" width="256" height="174" rx="32" fill="none" stroke="#1769e0" stroke-opacity=".16" stroke-width="3" stroke-dasharray="7 9"/>
+<path d="M150 192h212" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+<rect x="318" y="262" width="116" height="78" rx="39" fill="url(#lgt)"/><rect x="318" y="262" width="116" height="78" rx="39" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+<circle cx="360" cy="301" r="17" fill="url(#lgc)"/><circle cx="360" cy="301" r="17" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/></g></svg></i>StaffPay</div><button class="gear" id="setBtn" aria-label="Settings"><svg class="ic"><use href="#i-sliders"/></svg></button></header>
 <main>
 <section class="pg on" id="home">
  <div class="top"><h2 id="hi">Payroll<br><span>overview</span></h2><button class="rb dk" aria-label="New payment" onclick="newPay()"><svg class="ic"><use href="#i-plus"/></svg></button></div>
  <div class="hero"><div class="k">Paid this month</div><div class="big" id="mTot"></div><span class="chip" id="mDelta"></span><div class="bars" id="bars"></div></div>
- <div class="grid"><div class="card"><div class="k">Paid today</div><div class="v" id="tTot"></div></div><div class="card"><div class="k">Avg. payment</div><div class="v" id="avg"></div></div></div>
- <div class="sh"><h3>Where the money went</h3></div><div class="card" id="split"></div>
+ <div class="grid"><div class="card link" role="button" tabindex="0" onclick="openDay()"><div class="k">Paid today</div><div class="v" id="tTot"></div></div><div class="card"><div class="k">Avg. payment</div><div class="v" id="avg"></div></div></div>
+ <div class="sh"><h3>Where the money went</h3><span class="k" id="splitM"></span></div><div class="card" id="split"></div>
  <div class="sh"><h3>Recent activity</h3><a onclick="go('stmt')">Statements</a></div><div class="card" id="recent"></div>
 </section>
 <section class="pg" id="pay">
  <h2 id="pTitle">Add<br><span>payment</span></h2><p class="sub" id="pSub">Record money given to an employee.</p>
  <form class="card" id="payForm">
-  <div class="fld"><label>Employee name</label><input list="dl" id="payEmpSearch" autocomplete="off" placeholder="Type to search a name…" required><datalist id="dl"></datalist><input type="hidden" id="payEmp"><div class="chips" id="recentEmp"></div><span class="k">Need to add someone? <a href="#" id="addInline" style="color:var(--blue)">Add employee</a></span></div>
+  <div class="fld"><label>Employee name</label><input id="payEmpSearch" autocomplete="off" placeholder="Type to search a name…" required><div class="pl" id="pl" hidden></div><input type="hidden" id="payEmp"><div class="chips" id="recentEmp"></div><span class="k">Need to add someone? <a href="#" id="addInline" style="color:var(--blue)">Add employee</a></span></div>
   <div class="fld"><label>Amount (AED)</label><input class="amt" id="payAmount" type="number" min=".01" step=".01" placeholder="0.00" inputmode="decimal" required><div class="chips" id="qa"></div></div>
   <div class="fld"><label>Date</label><input id="payDate" type="date" required></div>
-  <div class="fld"><label>Note <span style="font-weight:500;color:#a0a8b8">(optional)</span></label><input id="payNote" maxlength="140" placeholder="Advance, salary, bonus…"><div class="chips" id="qn"></div></div>
-  <div class="two"><button type="button" class="btn" id="payCancel">Cancel</button><button class="btn p" id="paySubmit">Save payment</button></div>
+  <div class="fld"><label>Note <span style="font-weight:500;color:#a0a8b8">(optional)</span></label><input id="payNote" maxlength="140" placeholder="Advance, salary, bonus…"><span class="k">Category · optional</span><div class="chips" id="qn"></div><span class="k" id="catHint"></span></div>
+  <button type="button" class="btn s" id="keep" style="grid-column:1/-1;width:100%;margin-bottom:14px"></button><div class="two"><button type="button" class="btn" id="payCancel">Done</button><button class="btn p" id="paySubmit">Save payment</button></div>
  </form>
 </section>
 <section class="pg" id="staff">
  <div class="top"><h2>Your<br><span>team</span></h2><div style="display:flex;gap:8px"><button class="rb" aria-label="Backup data" onclick="expAll()"><svg class="ic"><use href="#i-down"/></svg></button><button class="rb dk" aria-label="Add employee" id="addEmpTop"><svg class="ic"><use href="#i-plus"/></svg></button></div></div>
- <input id="q" placeholder="Search staff…" style="margin:6px 0 4px"><div class="card" id="empRows"></div>
+ <input id="q" type="search" placeholder="Search staff…" style="margin:6px 0 4px"><div class="card" id="empRows"></div>
  <div class="two no-print"><button class="btn s" onclick="expAll()"><svg class="ic"><use href="#i-down"/></svg>Backup</button><button class="btn s" onclick="$('imp').click()"><svg class="ic"><use href="#i-up"/></svg>Restore</button><input type="file" id="imp" accept=".json" hidden></div>
 </section>
 <section class="pg" id="stmt">
- <h2>Employee<br><span>statements</span></h2><p class="sub no-print">View payments month by month.</p>
+ <h2>Employee<br><span>statements</span></h2><p class="sub no-print">View payments for any period.</p>
  <div class="fld no-print"><input list="dl2" id="stmtEmpSearch" placeholder="Search employee…"><datalist id="dl2"></datalist><input type="hidden" id="stmtEmp"></div>
- <div class="mn no-print"><button aria-label="Previous month" onclick="mv(-1)"><svg class="ic"><use href="#i-l"/></svg></button><b id="mLbl"></b><button aria-label="Next month" onclick="mv(1)"><svg class="ic"><use href="#i-r"/></svg></button></div>
+ <div class="seg no-print" id="seg"><button data-m="m">This month</button><button data-m="2">2 months</button><button data-m="3">3 months</button><button data-m="all">All time</button><button data-m="day">Pick date</button><button data-m="none">Clear</button></div><input type="date" id="sDate" class="no-print" style="margin-bottom:12px" hidden><select id="sCat" class="no-print" style="margin-bottom:12px"></select>
+ <div class="mn no-print" id="mn"><button aria-label="Previous month" onclick="mv(-1)"><svg class="ic"><use href="#i-l"/></svg></button><b id="mLbl"></b><button aria-label="Next month" onclick="mv(1)"><svg class="ic"><use href="#i-r"/></svg></button></div>
  <div class="hero" id="sHero"><div class="k" id="sName">Select an employee</div><div class="big" id="sTot"></div><span class="chip" id="sCnt"></span></div>
  <div class="card" id="sRows"></div>
- <div class="two no-print"><button class="btn s" onclick="window.print()"><svg class="ic"><use href="#i-print"/></svg>Print</button><button class="btn s" onclick="share()"><svg class="ic"><use href="#i-send"/></svg>WhatsApp</button><button class="btn s" onclick="csv()"><svg class="ic"><use href="#i-csv"/></svg>CSV</button></div>
+ <div class="two no-print"><button class="btn s" onclick="printStmt()"><svg class="ic"><use href="#i-print"/></svg>Print</button><button class="btn s" onclick="share()"><svg class="ic"><use href="#i-send"/></svg>WhatsApp</button><button class="btn s" onclick="csv()"><svg class="ic"><use href="#i-csv"/></svg>CSV</button></div>
 </section>
 </main>
+<div id="prt"></div>
 <nav><button data-p="home" class="on"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></button><button data-p="staff"><svg class="ic"><use href="#i-users"/></svg><span>Team</span></button><button class="plus" onclick="newPay()" aria-label="New payment"><svg class="ic"><use href="#i-plus"/></svg><span>New payment</span></button><button data-p="stmt"><svg class="ic"><use href="#i-file"/></svg><span>Statements</span></button></nav>
 <dialog id="empModal"><form id="empForm"><h3 id="empT">Add employee</h3><input id="empEditId" type="hidden"><div class="fld"><label>Employee name</label><input id="empName" required maxlength="80" placeholder="Enter name"></div><div class="two"><button type="button" class="btn" id="cancelEmp">Cancel</button><button class="btn p" id="empSubmit">Save employee</button></div></form></dialog>
+<dialog id="profSheet"><div id="profB"></div><button type="button" class="btn" style="width:100%;margin-top:14px" onclick="profSheet.close()">Close</button></dialog>
+<dialog id="setSheet"><h3>Settings</h3><div class="fld"><label>Cloud sync</label><div style="display:flex;gap:10px;align-items:center"><span id="sync">Connecting…</span><button type="button" class="btn s" id="syncNow">Sync now</button></div></div><div class="fld"><label>Business name (shown on prints)</label><input id="sBiz" maxlength="60" placeholder="Your company name"></div><div class="fld"><label>Default category</label><select id="sDefCat"></select></div><div class="fld"><label>Payment date</label><select id="sDm"><option value="today">Always today</option><option value="last">Last date I used</option></select></div><div id="tgs"></div><div class="k" id="sBk" style="margin:4px 0 10px"></div><div class="two"><button type="button" class="btn" onclick="expAll()">Backup now</button><button type="button" class="btn p" onclick="setSheet.close()">Done</button></div></dialog>
+<dialog id="daySheet"><h3 id="dayT"></h3><div id="dayRows"></div><div class="two" style="margin-top:14px"><button type="button" class="btn" id="dayClose">Close</button><button type="button" class="btn p" id="dayAdd">Add payment</button></div></dialog>
 <div id="toast"></div>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
 <script>
-(()=>{const $=id=>document.getElementById(id);window.$=$;let employees=[],payments=[],fdb=null,editing=null,sm=new Date().toISOString().slice(0,7);const KEY="staffpay-working-v1";
+(()=>{const $=id=>document.getElementById(id);window.$=$;let employees=[],payments=[],fdb=null,editing=null,sm=localYM();const KEY="staffpay-working-v1";
 const cfg={apiKey:"AIzaSyAthWw5mGlIzMeIBjaFrkGd_dS8UkaELlE",authDomain:"staffpay-c1c95.firebaseapp.com",databaseURL:"https://staffpay-c1c95-default-rtdb.firebaseio.com",projectId:"staffpay-c1c95",storageBucket:"staffpay-c1c95.firebasestorage.app",messagingSenderId:"972523894348",appId:"1:972523894348:web:6dba637ba1caa0fc88e6e9"};
 const sync=(s,l)=>{$("sync").className=s;$("sync").textContent=l};
 try{firebase.initializeApp(cfg);fdb=firebase.database();sync("","Connecting…")}catch(e){sync("offline","Device only")}
 const today=()=>{let d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const money=n=>"AED "+(Number(n)||0).toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const sum=a=>a.reduce((s,p)=>s+Math.round(p.amount*100),0)/100;
+const sum=a=>a.reduce((s,p)=>s+(p.category==="Deduction"?0:Math.round(p.amount*100)),0)/100,ded=a=>a.reduce((s,p)=>s+(p.category==="Deduction"?Math.round(p.amount*100):0),0)/100;
 const ic=n=>`<svg class="ic"><use href="#i-${n}"/></svg>`;const uid=()=>crypto.randomUUID?crypto.randomUUID():String(Date.now()+Math.random());
-function toast(s){let t=$("toast");t.textContent=s;t.style.display="block";clearTimeout(t.h);t.h=setTimeout(()=>t.style.display="none",2400)}
+let S={cat:"",dm:"today",ld:"",keep:false,cd:false,rm:false,biz:"",lb:0};try{Object.assign(S,JSON.parse(localStorage.getItem("staffpay-settings")||"{}"))}catch(e){}
+const saveS=()=>{try{localStorage.setItem("staffpay-settings",JSON.stringify(S))}catch(e){}};
+const ab=v=>v>=1000?(v/1000).toFixed(v>=10000?0:1).replace(".0","")+"k":String(Math.round(v));
+let _mt=null,_ct=0;function setBig(v){let el=$("mTot"),f=n=>"<small>AED</small>"+n.toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});if(_mt===v)return;let from=_mt===null?0:_mt;_mt=v;if(S.rm||matchMedia("(prefers-reduced-motion:reduce)").matches){el.innerHTML=f(v);return}let t0=performance.now(),id=++_ct;(function st(t){if(id!==_ct)return;let k=Math.min(1,(t-t0)/500);el.innerHTML=f(k<1?from+(v-from)*(1-Math.pow(1-k,3)):v);if(k<1)requestAnimationFrame(st)})(t0)}
+const norm=s=>String(s||"").toLowerCase().replace(/\s+/g," ").trim();
+const hl=(n,q)=>{q=norm(q);let i=q?n.toLowerCase().indexOf(q):-1;return i<0?esc(n):esc(n.slice(0,i))+"<mark>"+esc(n.slice(i,i+q.length))+"</mark>"+esc(n.slice(i+q.length))};
+function localYM(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")}
+function toast(s,u){let t=$("toast");(document.querySelector("dialog[open]")||document.body).appendChild(t);t.textContent=s;if(u){let b=document.createElement("button");b.textContent="Undo";b.onclick=()=>{u();t.style.display="none"};t.appendChild(b)}t.style.display="block";clearTimeout(t.h);t.h=setTimeout(()=>t.style.display="none",u?6000:2400)}
 const saveLocal=()=>localStorage.setItem(KEY,JSON.stringify({employees,payments}));
-function persist(){saveLocal();if(!fdb)return sync("offline","Device only");sync("","Saving…");fdb.ref("staffpay").set({employees,payments,updatedAt:firebase.database.ServerValue.TIMESTAMP}).then(()=>sync("online","Synced")).catch(()=>{sync("offline","Device only");toast("Saved on this device. Sync unavailable.")})}
+const DK="staffpay-dirty";let first=true;const mergeById=(a,b)=>{let m=new Map(a.map(x=>[x.id,x]));b.forEach(x=>m.set(x.id,x));return[...m.values()]};
+function persist(){try{saveLocal();localStorage.setItem(DK,"1")}catch(e){toast("Could not save on this device. Storage may be full.");return false}
+if(!fdb){sync("offline","Device only");return true}
+sync("",navigator.onLine?"Saving…":"Offline · pending");
+fdb.ref("staffpay").set({employees,payments,updatedAt:firebase.database.ServerValue.TIMESTAMP}).then(()=>{try{localStorage.removeItem(DK)}catch(e){}sync("online","Synced")}).catch(()=>{sync("offline","Pending sync");toast("Saved on device. Cloud sync pending.")});return true}
 function load(){try{let d=JSON.parse(localStorage.getItem(KEY)||"{}");employees=d.employees||[];payments=d.payments||[]}catch(e){}
-if(fdb)fdb.ref("staffpay").on("value",s=>{let d=s.val();if(d){employees=Array.isArray(d.employees)?d.employees:Object.values(d.employees||{});payments=Array.isArray(d.payments)?d.payments:Object.values(d.payments||{});saveLocal();render()}sync("online","Synced")},()=>sync("offline","Device only"))}
+if(fdb)fdb.ref("staffpay").on("value",s=>{let d=s.val();if(d){let re=Array.isArray(d.employees)?d.employees:Object.values(d.employees||{}),rp=Array.isArray(d.payments)?d.payments:Object.values(d.payments||{});if(first&&localStorage.getItem(DK)){employees=mergeById(re,employees);payments=mergeById(rp,payments);saveLocal();render();persist()}else{employees=re;payments=rp;saveLocal();render()}}first=false;sync("online","Synced")},()=>sync("offline","Device only"))}
 const name=id=>employees.find(e=>e.id===id)?.name||"Employee";
-const sorted=()=>[...employees].sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:"base"}));
-const byName=n=>{n=String(n||"").trim().toLowerCase();return employees.find(e=>e.name.toLowerCase()===n)};
+const sorted=()=>employees.filter(e=>!e.archived).sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:"base"}));
+const byName=n=>{n=String(n||"").trim().toLowerCase();return employees.find(e=>!e.archived&&e.name.toLowerCase()===n)};
 function av(n){let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360,h=210+(h%50)-25;return `<div class="av" style="background:hsl(${h} 80% 94%);color:hsl(${h} 70% 38%)">${esc(n.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase())}</div>`}
 const fd=d=>new Date(d+"T00:00").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"});
 function render(){
- let t=today(),m=t.slice(0,7),pm=new Date();pm.setDate(1);pm.setMonth(pm.getMonth()-1);pm=pm.toISOString().slice(0,7);
+ let t=today(),m=t.slice(0,7),pm=new Date();pm.setDate(1);pm.setMonth(pm.getMonth()-1);pm=localYM(pm);
  let mp=payments.filter(p=>p.date.startsWith(m)),mt=sum(mp),lt=sum(payments.filter(p=>p.date.startsWith(pm)));
- $("mTot").innerHTML="<small>AED</small>"+mt.toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});
+ setBig(mt);
  $("mDelta").textContent=lt?(mt>=lt?"▲ ":"▼ ")+Math.abs(Math.round((mt-lt)/lt*100))+"% vs last month":mp.length+" payments this month";
  let days=[...Array(7)].map((_,i)=>{let d=new Date();d.setDate(d.getDate()-6+i);let s=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");return{s,l:d.toLocaleDateString("en",{weekday:"narrow"}),v:sum(payments.filter(p=>p.date===s))}}),mx=Math.max(...days.map(d=>d.v),1);
- $("bars").innerHTML=days.map(d=>`<div class="${d.s===t?"t":""}"><b style="height:${Math.max(6,d.v/mx*70)}px" title="${money(d.v)}"></b>${d.l}</div>`).join("");
- $("tTot").textContent=money(sum(payments.filter(p=>p.date===t)));$("avg").textContent=money(mp.length?mt/mp.length:0);
- let tot={};mp.forEach(p=>tot[p.employeeId]=(tot[p.employeeId]||0)+p.amount);let rk=Object.entries(tot).sort((a,b)=>b[1]-a[1]);
+ $("bars").innerHTML=days.map(d=>`<div class="${d.s===t?"t":""}" data-d="${d.s}" role="button" tabindex="0" aria-label="${fd(d.s)}, ${money(d.v)}"><span class="bv">${d.v?ab(d.v):""}</span><b style="height:${d.v?Math.round(12+52*Math.sqrt(d.v/mx)):3}px;${d.v?"":"opacity:.35;min-height:3px"}" title="${money(d.v)}"></b>${d.l}</div>`).join("");
+ $("splitM").textContent=new Date().toLocaleDateString("en",{month:"long",year:"numeric"});$("tTot").textContent=money(sum(payments.filter(p=>p.date===t)));$("avg").textContent=money(mp.length?mt/mp.length:0);
+ let tot={},cn={};mp.forEach(p=>{if(p.category!=="Deduction"){tot[p.employeeId]=(tot[p.employeeId]||0)+p.amount;cn[p.employeeId]=(cn[p.employeeId]||0)+1}});let rk=Object.entries(tot).sort((a,b)=>b[1]-a[1]);
  
- $("split").innerHTML=rk.length?rk.slice(0,6).map(([id,v])=>`<div class="row" onclick="openStmt('${id}')">${av(name(id))}<div class="m"><b>${esc(name(id))}</b><div class="bar"><i style="width:${v/rk[0][1]*100}%"></i></div></div><div class="a">${money(v)}</div></div>`).join(""):'<div class="empty">No payments this month yet.</div>';
- let rc=[...payments].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,8),last="",h="";rc.forEach(p=>{if(p.date!==last){h+=`<div class="day">${p.date===t?"Today":fd(p.date)}</div>`;last=p.date}h+=`<div class="row">${av(p.employeeName||"?")}<div class="m"><b>${esc(p.employeeName)}</b><small>${esc(p.note||"No note")}</small></div><div class="a">${money(p.amount)}</div></div>`});
+ $("split").innerHTML=rk.length?rk.slice(0,splitAll?99999:10).map(([id,v])=>`<div class="row link" onclick="openProf('${id}')">${av(name(id))}<div class="m"><b>${esc(name(id))}</b><small>${cn[id]} payment${cn[id]==1?"":"s"}</small></div><div class="a">${money(v)}</div></div>`).join("")+(rk.length>10?`<button class="btn s" style="width:100%;margin-top:10px" onclick="toggleSplit()">${splitAll?"Show less":"View more ("+(rk.length-10)+")"}</button>`:""):'<div class="empty">No payments this month yet.</div>';
+ let rc=[...payments].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,8),last="",h="";rc.forEach(p=>{if(p.date!==last){h+=`<div class="day">${p.date===t?"Today":fd(p.date)}</div>`;last=p.date}h+=`<div class="row link" onclick="openDay('${p.date}')">${av(p.employeeName||"?")}<div class="m"><b>${esc(p.employeeName)}</b><small>${esc(p.note||"No note")}${catTag(p)}</small></div><div class="a">${money(p.amount)}</div></div>`});
  $("recent").innerHTML=h||'<div class="empty">No payments yet. Tap + to add one.</div>';
- let o=sorted().map(e=>`<option value="${esc(e.name)}">`).join("");$("dl").innerHTML=o;$("dl2").innerHTML=o;
- let q=$("q").value.toLowerCase(),es=sorted().filter(e=>e.name.toLowerCase().includes(q));
- $("empRows").innerHTML=es.length?es.map(e=>{let c=payments.filter(p=>p.employeeId===e.id);return `<div class="row">${av(e.name)}<div class="m link" onclick="openStmt('${e.id}')"><b>${esc(e.name)}</b><small>${c.length} payment${c.length==1?"":"s"} · ${money(sum(c.filter(p=>p.date.startsWith(m))))} this month</small></div><button class="ib" aria-label="Edit" onclick="editEmp('${e.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="delEmp('${e.id}')">${ic("trash")}</button></div>`}).join(""):'<div class="empty">No employees yet. Add your first one.</div>';
- let ids=[...new Set([...payments].sort((a,b)=>b.date.localeCompare(a.date)).map(p=>p.employeeId))].slice(0,5).filter(i=>employees.some(e=>e.id===i));
+ let o=sorted().map(e=>`<option value="${esc(e.name)}">`).join("");$("dl2").innerHTML=o;
+ let q=norm($("q").value),es=sorted().filter(e=>norm(e.name).includes(q));
+ $("empRows").innerHTML=es.length?es.map(e=>{let c=payments.filter(p=>p.employeeId===e.id);return `<div class="row">${av(e.name)}<div class="m link" onclick="openProf('${e.id}')"><b>${hl(e.name,q)}</b><small>${c.length} payment${c.length==1?"":"s"} · ${money(sum(c.filter(p=>p.date.startsWith(m))))} this month</small></div><button class="ib" aria-label="Edit" onclick="editEmp('${e.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="delEmp('${e.id}')">${ic("trash")}</button></div>`}).join(""):(q?'<div class="empty">No employee matches that search.</div>':'<div class="empty">No employees yet. Add your first one.</div>');
+ let ids=[...new Set([...payments].sort((a,b)=>b.date.localeCompare(a.date)).map(p=>p.employeeId))].slice(0,5).filter(i=>employees.some(e=>e.id===i&&!e.archived));
  $("recentEmp").innerHTML=ids.map(i=>`<button type="button" onclick="pick('${i}')">${esc(name(i))}</button>`).join("");
- stmt()}
-function stmt(){let id=$("stmtEmp").value,arr=payments.filter(p=>p.employeeId===id&&p.date.startsWith(sm)).sort((a,b)=>a.date.localeCompare(b.date));
- $("mLbl").textContent=new Date(sm+"-01T00:00").toLocaleDateString("en",{month:"long",year:"numeric"});
- $("sName").textContent=id?name(id)+" · "+$("mLbl").textContent:"Select an employee";$("sTot").innerHTML="<small>AED</small>"+sum(arr).toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});$("sCnt").textContent=arr.length+" payment"+(arr.length==1?"":"s");
- $("sRows").innerHTML=arr.length?arr.map(p=>`<div class="row"><div class="m"><b>${fd(p.date)}</b><small>${esc(p.note||"—")}</small></div><div class="a">${money(p.amount)}</div><button class="ib no-print" aria-label="Edit" onclick="editPay('${p.id}')">${ic("edit")}</button><button class="ib d no-print" aria-label="Delete" onclick="delPay('${p.id}')">${ic("trash")}</button></div>`).join(""):`<div class="empty">${id?"No payments this month.":"Pick an employee to see their statement."}</div>`;window._arr=arr}
-window.mv=d=>{let x=new Date(sm+"-01T00:00");x.setMonth(x.getMonth()+d);sm=x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0");stmt()};
-window.share=()=>{let id=$("stmtEmp").value;if(!id)return toast("Select an employee.");let a=window._arr;open("https://wa.me/?text="+encodeURIComponent(`*${name(id)} – ${$("mLbl").textContent}*\n`+a.map(p=>`${p.date}  ${money(p.amount)}${p.note?"  ("+p.note+")":""}`).join("\n")+`\n*Total: ${money(sum(a))}*`))};
+ stmt();if($("daySheet").open)dayRender();if($("profSheet").open)profRender()}
+let mode="",curDay=today(),cat="";const CATS=["Salary","Advance","Overtime","Bonus","Deduction","Other"];let splitAll=false;
+const catTag=p=>p.category?" · "+esc(p.category):"";
+const catOK=p=>{let v=$("sCat").value;return !v||(v==="_"?!p.category:p.category===v)};
+function range(){if(!mode)return{f:()=>true,l:"All time"};if(mode==="m")return{f:p=>p.date.startsWith(sm),l:new Date(sm+"-01T00:00").toLocaleDateString("en",{month:"long",year:"numeric"})};
+if(mode==="day"){let d=$("sDate").value||today();return{f:p=>p.date===d,l:fd(d)}}
+if(mode==="all")return{f:()=>true,l:"All time"};
+let n=+mode,t=new Date();t.setDate(1);t.setMonth(t.getMonth()-(n-1));let from=localYM(t)+"-01";return{f:p=>p.date>=from,l:"Last "+n+" months"}}
+function stmt(){let id=$("stmtEmp").value,r=range(),arr=(mode||id||$("sCat").value?payments:[]).filter(p=>(!id||p.employeeId===id)&&r.f(p)&&catOK(p)).sort((a,b)=>mode==="m"?a.date.localeCompare(b.date):b.date.localeCompare(a.date));
+$("mLbl").textContent=r.l;$("mn").hidden=mode!=="m";$("sDate").hidden=mode!=="day";document.querySelectorAll("#seg button").forEach(b=>b.classList.toggle("on",b.dataset.m===mode));
+$("sName").textContent=mode||id||$("sCat").value?(id?name(id):"All employees")+" · "+r.l:"Nothing selected";$("sTot").innerHTML="<small>AED</small>"+sum(arr).toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});$("sCnt").textContent=arr.length+" payment"+(arr.length==1?"":"s")+(ded(arr)?" · Deductions "+money(ded(arr)):"");
+$("sRows").innerHTML=arr.length?arr.map(p=>`<div class="row"><div class="m"><b>${id?fd(p.date):esc(name(p.employeeId))}</b><small>${id?"":fd(p.date)+" · "}${esc(p.note||"—")}${catTag(p)}</small></div><div class="a${p.category==="Deduction"?" bad":""}">${money(p.amount)}</div><button class="ib no-print" aria-label="Receipt" onclick="printReceipt('${p.id}')">${ic("print")}</button><button class="ib no-print" aria-label="Edit" onclick="editPay('${p.id}')">${ic("edit")}</button><button class="ib d no-print" aria-label="Delete" onclick="delPay('${p.id}')">${ic("trash")}</button></div>`).join(""):(mode||id||$("sCat").value?'<div class="empty">No payments found.</div>':'<div class="empty">Pick an employee, a period or a category to see payments.</div>');window._arr=arr;window._lbl=r.l}
+$("seg").onclick=e=>{let m=e.target.dataset.m;if(!m)return;if(m==="none"){mode="";$("stmtEmp").value="";$("stmtEmpSearch").value="";$("sCat").value=""}else{mode=m;if(m==="m")sm=localYM();if(m==="day"&&!$("sDate").value)$("sDate").value=today()}stmt()};$("sDate").onchange=stmt;
+window.mv=d=>{mode="m";let x=new Date(sm+"-01T00:00");x.setMonth(x.getMonth()+d);sm=localYM(x);stmt()};
+window.share=()=>{let id=$("stmtEmp").value,a=window._arr;if(!a.length)return toast("No payments to share.");let w=open("https://wa.me/?text="+encodeURIComponent(`*${id?name(id):"All employees"} – ${window._lbl}*\n`+a.map(p=>`${p.date}  ${id?"":name(p.employeeId)+"  "}${money(p.amount)}${p.note?"  ("+p.note+")":""}`).join("\n")+`\n*Total: ${money(sum(a))}*`));if(!w)toast("Pop-up blocked. Allow pop-ups to share.")};
 function dl(n,t,m){let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()}
-window.csv=()=>{let id=$("stmtEmp").value;if(!id)return toast("Select an employee.");dl(name(id)+"-"+sm+".csv","Date,Note,Amount\n"+window._arr.map(p=>`${p.date},"${(p.note||"").replace(/"/g,'""')}",${p.amount}`).join("\n"),"text/csv")};
-window.expAll=()=>dl("staffpay-backup-"+today()+".json",JSON.stringify({employees,payments}),"application/json");
+window.csv=()=>{let id=$("stmtEmp").value,a=window._arr;if(!a.length)return toast("No payments to export.");let q=s=>'"'+String(s??"").replace(/"/g,'""')+'"';dl((id?name(id):"All-employees")+"-"+window._lbl.replace(/\W+/g,"-")+".csv",(id?"Date,Note,Amount,Category\n":"Date,Employee,Note,Amount,Category\n")+a.map(p=>[p.date,...(id?[]:[q(name(p.employeeId))]),q(p.note),p.amount.toFixed(2),q(p.category)].join(",")).join("\n"),"text/csv");toast("CSV exported.")};
+const prow=(p,who)=>`<div class="row">${who?av(name(p.employeeId)):""}<div class="m"><b>${who?esc(name(p.employeeId)):fd(p.date)}</b><small>${esc(p.note||"No note")}${catTag(p)}</small></div><div class="a${p.category==="Deduction"?" bad":""}">${money(p.amount)}</div><button class="ib" aria-label="Receipt" onclick="printReceipt('${p.id}')">${ic("print")}</button><button class="ib" aria-label="Edit" onclick="editPay('${p.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="delPay('${p.id}')">${ic("trash")}</button></div>`;
+function dayRender(){let a=payments.filter(p=>p.date===curDay);$("dayT").textContent=(curDay===today()?"Today · ":"")+fd(curDay);
+$("dayRows").innerHTML=a.length?`<div class="k" style="margin-bottom:6px">${a.length} payment${a.length==1?"":"s"} · ${money(sum(a))}</div>`+a.map(p=>prow(p,1)).join(""):'<div class="empty">No payments on this day.</div>'}
+window.openDay=d=>{curDay=d||today();dayRender();let sh=$("daySheet");if(!sh.open)sh.showModal()};
+$("bars").onclick=e=>{let b=e.target.closest("[data-d]");if(b)openDay(b.dataset.d)};$("bars").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){let b=e.target.closest("[data-d]");if(b){e.preventDefault();openDay(b.dataset.d)}}};
+$("dayClose").onclick=()=>$("daySheet").close();$("dayAdd").onclick=()=>{newPay();$("payDate").value=curDay};
+window.expAll=()=>{dl("staffpay-backup-"+today()+".json",JSON.stringify({employees,payments}),"application/json");S.lb=Date.now();saveS();setUI();toast("Backup file created.")};
 $("imp").onchange=e=>{let f=e.target.files[0];if(!f)return;f.text().then(t=>{let d=JSON.parse(t);if(!Array.isArray(d.employees)||!Array.isArray(d.payments))throw 0;if(!confirm("Replace current data with this backup?"))return;employees=d.employees;payments=d.payments;persist();render();toast("Backup restored.")}).catch(()=>toast("Invalid backup file."))};
-function go(n){document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===n));document.querySelectorAll("nav [data-p]").forEach(b=>b.classList.toggle("on",b.dataset.p===n));scrollTo(0,0);if(n==="stmt")stmt()}window.go=go;
+function go(n){$("daySheet").close();$("profSheet").close();document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===n));document.querySelectorAll("nav [data-p]").forEach(b=>b.classList.toggle("on",b.dataset.p===n));scrollTo(0,0);if(n==="stmt")stmt()}window.go=go;
 document.querySelectorAll("nav [data-p]").forEach(b=>b.onclick=()=>go(b.dataset.p));
-window.openStmt=id=>{$("stmtEmp").value=id;$("stmtEmpSearch").value=name(id);go("stmt")};
+window.openStmt=id=>{mode="m";$("stmtEmp").value=id;$("stmtEmpSearch").value=name(id);go("stmt")};
 $("stmtEmpSearch").oninput=()=>{let e=byName($("stmtEmpSearch").value);$("stmtEmp").value=e?e.id:"";stmt()};
-$("payEmpSearch").oninput=()=>{let e=byName($("payEmpSearch").value);$("payEmp").value=e?e.id:""};
-window.pick=id=>{$("payEmp").value=id;$("payEmpSearch").value=name(id)};
+$("payEmpSearch").oninput=()=>{plRender();let e=byName($("payEmpSearch").value);$("payEmp").value=e?e.id:""};
+window.pick=id=>{$("payEmp").value=id;$("payEmpSearch").value=name(id);$("pl").hidden=true};
 $("q").oninput=render;
 const openEmp=()=>{$("empT").textContent="Add employee";$("empSubmit").textContent="Save employee";$("empEditId").value="";$("empName").value="";$("empModal").showModal();$("empName").focus()};
 window.editEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;$("empT").textContent="Edit employee";$("empSubmit").textContent="Update employee";$("empEditId").value=id;$("empName").value=e.name;$("empModal").showModal()};
-window.delEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;let n=payments.filter(p=>p.employeeId===id).length;if(!confirm(n?`Delete ${e.name} and its ${n} payment${n==1?"":"s"}? This cannot be undone.`:`Delete ${e.name}? This cannot be undone.`))return;employees=employees.filter(x=>x.id!==id);payments=payments.filter(p=>p.employeeId!==id);persist();render();toast("Employee deleted.")};
+window.delEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;let n=payments.filter(p=>p.employeeId===id).length;
+if(n){if(!confirm(`Archive ${e.name}? Their ${n} payment${n==1?"":"s"} stay in statements and totals. Add the same name again to restore.`))return;e.archived=true;persist();render();return toast("Employee archived.",()=>{e.archived=false;persist();render()})}
+if(!confirm(`Delete ${e.name}? This cannot be undone.`))return;employees=employees.filter(x=>x.id!==id);persist();render();toast("Employee deleted.")};
 $("addInline").onclick=e=>{e.preventDefault();openEmp()};$("addEmpTop").onclick=openEmp;$("cancelEmp").onclick=()=>$("empModal").close();
-$("empForm").onsubmit=e=>{e.preventDefault();let n=$("empName").value.trim(),id=$("empEditId").value;if(!n)return;if(employees.some(x=>x.name.toLowerCase()===n.toLowerCase()&&x.id!==id))return toast("Employee already exists.");
+$("empForm").onsubmit=e=>{e.preventDefault();let n=$("empName").value.trim(),id=$("empEditId").value;if(!n)return;let dup=employees.find(x=>x.name.toLowerCase()===n.toLowerCase()&&x.id!==id);if(dup&&dup.archived&&!id){dup.archived=false;persist();render();$("empModal").close();pick(dup.id);return toast("Employee restored.")}if(dup)return toast("Employee already exists.");
  if(id){let x=employees.find(y=>y.id===id);x.name=n;payments.forEach(p=>{if(p.employeeId===id)p.employeeName=n});toast("Employee updated.")}else{let x={id:uid(),name:n};employees.push(x);$("payEmp").value=x.id;$("payEmpSearch").value=n;toast("Employee added.")}persist();render();$("empModal").close()};
-function newPay(){editing=null;$("payForm").reset();$("payEmp").value="";$("payDate").value=today();$("pTitle").innerHTML="Add<br><span>payment</span>";$("pSub").textContent="Record money given to an employee.";$("paySubmit").textContent="Save payment";go("pay")}window.newPay=newPay;
-window.editPay=id=>{let p=payments.find(x=>x.id===id);if(!p)return;editing=id;$("payEmp").value=p.employeeId;$("payEmpSearch").value=name(p.employeeId);$("payDate").value=p.date;$("payAmount").value=p.amount;$("payNote").value=p.note||"";$("pTitle").innerHTML="Edit<br><span>payment</span>";$("pSub").textContent="Update the employee, date, amount, or note.";$("paySubmit").textContent="Update payment";go("pay")};
-window.delPay=id=>{if(!confirm("Delete this payment?"))return;payments=payments.filter(p=>p.id!==id);persist();render();toast("Payment deleted.")};
+function newPay(){editing=null;$("payForm").reset();setCat(S.cat);$("payCancel").textContent="Done";$("payEmp").value="";$("payDate").value=S.dm==="last"&&S.ld?S.ld:today();$("pTitle").innerHTML="Add<br><span>payment</span>";$("pSub").textContent="Record money given to an employee.";$("paySubmit").textContent="Save payment";go("pay")}window.newPay=newPay;
+window.editPay=id=>{let p=payments.find(x=>x.id===id);if(!p)return;editing=id;setCat(p.category||"");$("payCancel").textContent="Cancel";$("payEmp").value=p.employeeId;$("payEmpSearch").value=name(p.employeeId);$("payDate").value=p.date;$("payAmount").value=p.amount;$("payNote").value=p.note||"";$("pTitle").innerHTML="Edit<br><span>payment</span>";$("pSub").textContent="Update the employee, date, amount, or note.";$("paySubmit").textContent="Update payment";go("pay")};
+window.delPay=id=>{let i=payments.findIndex(p=>p.id===id);if(i<0)return;if(S.cd&&!confirm("Delete this payment?"))return;let[p]=payments.splice(i,1);persist();render();toast("Payment deleted.",()=>{payments.splice(Math.min(i,payments.length),0,p);persist();render();toast("Payment restored.")})};
 $("qa").innerHTML=[50,100,200,500,1000].map(n=>`<button type="button" data-a="${n}">+${n}</button>`).join("");
 $("qa").onclick=e=>{let a=e.target.dataset.a;if(a)$("payAmount").value=((+$("payAmount").value||0)+ +a).toFixed(2)};
-$("qn").innerHTML=["Salary","Advance","Bonus","Overtime"].map(n=>`<button type="button">${n}</button>`).join("");$("qn").onclick=e=>{if(e.target.tagName==="BUTTON")$("payNote").value=e.target.textContent};
-$("payForm").onsubmit=e=>{e.preventDefault();let employeeId=$("payEmp").value,date=$("payDate").value,amount=Math.round(Number($("payAmount").value)*100)/100,note=$("payNote").value.trim();if(!employeeId||!date||!(amount>0))return toast("Check payment details.");
- if(editing){let p=payments.find(x=>x.id===editing);if(p)Object.assign(p,{employeeId,employeeName:name(employeeId),date,amount,note});persist();render();toast("Payment updated.");editing=null;openStmt(employeeId)}
- else{payments.push({id:uid(),employeeId,employeeName:name(employeeId),date,amount,note});persist();render();toast("Payment saved.");newPay();go("home")}};
+const setCat=c=>{cat=c;document.querySelectorAll("#qn button").forEach(b=>b.classList.toggle("sel",b.textContent===c));$("catHint").textContent=c==="Deduction"?"Deductions are saved as a positive amount and are not counted as money paid.":""};
+$("qn").innerHTML=CATS.map(n=>`<button type="button">${n}</button>`).join("");$("qn").onclick=e=>{if(e.target.tagName==="BUTTON")setCat(cat===e.target.textContent?"":e.target.textContent)};
+$("payForm").onsubmit=e=>{e.preventDefault();let employeeId=$("payEmp").value,date=$("payDate").value,amount=Math.round(Number($("payAmount").value)*100)/100,note=$("payNote").value.trim();
+if(!employeeId)return toast("Pick an employee from the list.");if(!date||!(amount>0))return toast("Enter a valid amount and date.");
+let rec={employeeId,employeeName:name(employeeId),date,amount,note},snap=JSON.stringify(payments),wasEdit=editing;if(cat)rec.category=cat;
+if(editing){let p=payments.find(x=>x.id===editing);if(p){Object.assign(p,rec);if(!cat)delete p.category}}else payments.push({id:uid(),...rec});
+if(!persist()){payments=JSON.parse(snap);return}
+render();toast(wasEdit?"Payment updated.":(fdb&&navigator.onLine?"Payment saved.":"Saved on device. Will sync when online."));
+S.ld=date;saveS();if(navigator.vibrate)navigator.vibrate(12);if(wasEdit){editing=null;return openStmt(employeeId)}
+$("payAmount").value="";$("payNote").value="";setCat(S.cat);
+if(S.keep)$("payAmount").focus();else{$("payEmp").value="";$("payEmpSearch").value="";$("payEmpSearch").focus()}};
 $("payCancel").onclick=()=>{editing=null;go("home")};
-$("payDate").value=today();load();render();
+$("payDate").value=today();$("sDate").value=today();
+function plRender(){let q=norm($("payEmpSearch").value),m=payments.filter(p=>p.date.startsWith(localYM())),l=sorted().filter(e=>!q||norm(e.name).includes(q));
+$("pl").innerHTML=l.length?l.slice(0,30).map(e=>`<div class="row" data-id="${e.id}">${av(e.name)}<div class="m"><b>${hl(e.name,q)}</b><small>${money(sum(m.filter(p=>p.employeeId===e.id)))} this month</small></div></div>`).join(""):'<div class="empty">No employee found.</div>';$("pl").hidden=false}
+$("payEmpSearch").onfocus=plRender;$("payEmpSearch").onblur=()=>$("pl").hidden=true;
+$("pl").onpointerdown=e=>{let r=e.target.closest("[data-id]");if(!r)return;e.preventDefault();pick(r.dataset.id);$("payAmount").focus()};
+$("payEmpSearch").onkeydown=e=>{if(e.key==="Enter"&&!$("payEmp").value){e.preventDefault();let r=$("pl").querySelector("[data-id]");if(r){pick(r.dataset.id);$("payAmount").focus()}}};
+const fdl=d=>new Date(d+"T00:00").toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}),n2=n=>(Number(n)||0).toLocaleString("en-AE",{minimumFractionDigits:2,maximumFractionDigits:2});
+const sg='<div class="sg"><div>Prepared by</div><div>Received by</div></div>',hd=(t,r)=>`<div class="ph"><div><div class="pb">${esc(S.biz||"StaffPay")}</div><div class="ps">${t}</div></div><div class="pd">${r}</div></div>`;
+function doPrint(h){$("prt").innerHTML=h;print()}
+window.printStmt=()=>{let a=window._arr;if(!a.length)return toast("No payments to print.");let id=$("stmtEmp").value,cv=$("sCat").value,by={};a.forEach(p=>(by[p.category||"Uncategorized"]??=[]).push(p));
+doPrint(hd("Payment statement","Generated "+new Date().toLocaleString("en-GB"))+`<div class="pm"><div><span>Employee</span>${esc(id?name(id):"All employees")}</div><div><span>Period</span>${esc(window._lbl)}</div><div><span>Category</span>${cv===""?"All":cv==="_"?"Uncategorized":esc(cv)}</div></div><table><thead><tr><th>Date</th>${id?"":"<th>Employee</th>"}<th>Category</th><th>Note</th><th class="r">Amount (AED)</th></tr></thead><tbody>`+a.map(p=>`<tr><td>${fdl(p.date)}</td>${id?"":`<td>${esc(name(p.employeeId))}</td>`}<td>${esc(p.category||"—")}</td><td>${esc(p.note||"")}</td><td class="r">${p.category==="Deduction"?"−":""}${n2(p.amount)}</td></tr>`).join("")+`</tbody></table><div class="tot"><div><span>Payments</span><span>${a.length}</span></div>${Object.keys(by).length>1?Object.entries(by).map(([k,v])=>`<div><span>${esc(k)} (${v.length})</span><span>${k==="Deduction"?"−"+n2(ded(v)):n2(sum(v))}</span></div>`).join(""):""}${ded(a)?`<div><span>Deductions</span><span>−${n2(ded(a))}</span></div>`:""}<div class="g"><span>Total paid (AED)</span><span>${n2(sum(a))}</span></div></div>${sg}<div class="fn">This is a record of payments, not a payslip.</div>`)};
+window.printReceipt=id=>{let p=payments.find(x=>x.id===id);if(!p)return;doPrint(`<div class="rc">`+hd(p.category==="Deduction"?"Deduction record":"Payment receipt","No. "+p.id.slice(-6).toUpperCase()+"<br>"+fdl(p.date))+`<div class="pm" style="grid-template-columns:1fr 1fr"><div><span>Employee</span>${esc(name(p.employeeId))}</div><div><span>Category</span>${esc(p.category||"—")}</div><div style="grid-column:1/-1"><span>Note</span>${esc(p.note||"—")}</div></div><span style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#777">Amount</span><div class="amt2">AED ${n2(p.amount)}</div>${sg}<div class="fn">Payment record only. Not a payslip.</div></div>`)};
+let curEmp="";
+function profRender(){let e=employees.find(x=>x.id===curEmp);if(!e)return $("profSheet").close();let a=payments.filter(p=>p.employeeId===curEmp).sort((x,y)=>y.date.localeCompare(x.date)),t=today(),l=a.find(p=>p.category!=="Deduction");
+$("profB").innerHTML=`<div class="top" style="align-items:center;margin-bottom:12px">${av(e.name)}<div class="m" style="flex:1"><b style="font-size:18px">${esc(e.name)}</b>${e.archived?"<small>Archived</small>":""}</div></div><div class="grid"><div class="card"><div class="k">This month</div><div class="v">${money(sum(a.filter(p=>p.date.startsWith(t.slice(0,7)))))}</div></div><div class="card"><div class="k">This year</div><div class="v">${money(sum(a.filter(p=>p.date.startsWith(t.slice(0,4)))))}</div></div><div class="card"><div class="k">Last payment</div><div class="v">${l?money(l.amount):"—"}</div><small class="k">${l?fd(l.date):"None yet"}</small></div><div class="card"><div class="k">All payments</div><div class="v">${a.length}</div></div></div><div class="two" style="margin:12px 0">${e.archived?"":`<button class="btn s p" onclick="payAgain('${e.id}')">${ic("plus")}Pay</button>`}<button class="btn s" onclick="openStmt('${e.id}')">${ic("file")}Statement</button></div><div class="k" style="margin:6px 0">Recent payments</div><div id="profRows" style="max-height:34vh;overflow:auto">`+(a.slice(0,10).map(p=>prow(p,0)).join("")||'<div class="empty">No payments yet.</div>')+"</div>"}
+window.openProf=id=>{curEmp=id;profRender();let sh=$("profSheet");if(!sh.open)sh.showModal()};
+window.payAgain=id=>{let l=payments.filter(p=>p.employeeId===id&&p.category!=="Deduction").sort((x,y)=>y.date.localeCompare(x.date))[0];newPay();pick(id);if(l){$("payAmount").value=l.amount;setCat(l.category||S.cat)}$("payAmount").focus()};
+window.toggleSplit=()=>{splitAll=!splitAll;render()};
+const TG=[["keep","Keep same employee after saving"],["cd","Ask before deleting a payment"],["rm","Reduce motion"]];
+$("tgs").innerHTML=TG.map(([k])=>`<button type="button" class="btn s" data-k="${k}" style="width:100%;margin-bottom:10px;justify-content:space-between"></button>`).join("");
+const opts='<option value="">None</option>'+CATS.map(c=>`<option>${c}</option>`).join("");$("sDefCat").innerHTML=opts;$("sCat").innerHTML='<option value="">All categories</option>'+CATS.map(c=>`<option>${c}</option>`).join("")+'<option value="_">Uncategorized</option>';$("sCat").onchange=stmt;
+function setUI(){document.documentElement.classList.toggle("rm",!!S.rm);$("sBiz").value=S.biz;$("sDefCat").value=S.cat;$("sDm").value=S.dm;
+document.querySelectorAll("#tgs button").forEach(b=>b.textContent=TG.find(t=>t[0]===b.dataset.k)[1]+": "+(S[b.dataset.k]?"On":"Off"));$("keep").textContent="Keep same employee after saving: "+(S.keep?"On":"Off");$("keep").setAttribute("aria-pressed",!!S.keep);
+let late=S.lb?Date.now()-S.lb>14*864e5:payments.length>0;$("sBk").textContent=S.lb?"Last backup: "+new Date(S.lb).toLocaleDateString("en-GB")+(late?" · more than 2 weeks ago":""):"No backup made on this device yet."}
+$("tgs").onclick=e=>{let k=e.target.dataset.k;if(k){S[k]=!S[k];saveS();setUI()}};$("keep").onclick=()=>{S.keep=!S.keep;saveS();setUI()};
+$("sBiz").oninput=()=>{S.biz=$("sBiz").value.trim();saveS()};$("sDefCat").onchange=()=>{S.cat=$("sDefCat").value;saveS()};$("sDm").onchange=()=>{S.dm=$("sDm").value;saveS()};
+$("syncNow").onclick=()=>{persist();toast(fdb?(navigator.onLine?"Sending data to the cloud…":"Offline. Data stays on this device."):"Cloud is not available.")};$("setBtn").onclick=()=>{setUI();$("setSheet").showModal()};
+setUI();load();render();setUI();
 })();
 </script>
 <script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));</script>
