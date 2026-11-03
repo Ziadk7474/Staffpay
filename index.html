@@ -147,7 +147,74 @@ dialog[open]{animation:sheet .26s cubic-bezier(.2,.8,.2,1)}dialog[open]::backdro
 ::-webkit-scrollbar{width:0;height:0}
 @media(min-width:960px){nav{background:#fff;backdrop-filter:none;border:0;border-right:1px solid var(--bd)}nav button.on{background:var(--soft);box-shadow:none}}
 .logo i{background:none;box-shadow:0 5px 14px rgba(10,63,156,.35);overflow:hidden;width:34px;height:34px;border-radius:11px}.logo i svg{width:100%;height:100%;stroke:none;display:block}
+
+/* ===== v2: side menu, salary section, PC refresh ===== */
+.dsk{display:none!important}
+.hbtns{display:flex;align-items:center;gap:2px}
+#pvb{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;background:#fff6e5;color:#7a4b00;font-size:12.5px;font-weight:500;padding:8px 16px;text-align:center}#pvb button{background:none;color:#7a4b00;font-weight:600;text-decoration:underline;padding:0}
+/* side menu (phone + tablet) */
+#drw{position:fixed;inset:0;z-index:40}
+#drw .bg{position:absolute;inset:0;background:rgba(17,22,31,.32);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:fade .2s ease}
+#drw .pn{position:absolute;left:10px;top:calc(10px + env(safe-area-inset-top));bottom:calc(10px + env(safe-area-inset-bottom));width:min(292px,84vw);background:#fff;border-radius:30px;box-shadow:0 30px 70px rgba(17,22,31,.28);padding:18px 14px;display:flex;flex-direction:column;gap:3px;animation:drIn .28s cubic-bezier(.2,.8,.2,1);overflow:auto}
+@keyframes drIn{from{opacity:0;transform:translateX(-26px)}}
+#drw .logo{padding:4px 8px 20px}
+#drw .pn button{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:16px;font-size:15px;font-weight:500;color:#4b5568;text-align:left;width:100%;background:none}
+#drw .pn button:active{transform:scale(.98)}
+#drw .pn button.on{background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(23,105,224,.28)}
+#drw .lbl{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#9aa3b2;padding:16px 14px 6px}
+#drw .ft{margin-top:auto;border-top:1px solid var(--bd);padding-top:8px}
+/* salary section */
+.ct{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:17px;font-weight:600;letter-spacing:-.025em;margin-bottom:16px}.ct a{font-size:13px;font-weight:500;color:var(--blue);cursor:pointer}
+.r2{display:grid;grid-template-columns:1fr 1fr;column-gap:12px}.r2>.fld{min-width:0}
+.calc{background:var(--soft);color:#0f4aa8;border-radius:18px;padding:12px 14px;font-size:13px;line-height:1.5;margin:-4px 0 16px}.calc b{font-weight:600}.calc.warn{background:#fff6e5;color:#7a4b00}
+#seSeg{margin-bottom:16px}#seSeg .seg{display:grid;gap:6px;overflow:visible;margin:0}#seSeg .sg4{grid-template-columns:repeat(4,1fr)}#seSeg .sg2{grid-template-columns:1fr 1fr}#seSeg button{padding:10px 6px}.sgl{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9aa3b2;margin:0 2px 8px}.sgl+.seg+.sgl{margin-top:14px}
+.se-side{display:contents}
+.row .a small{display:block;font-size:11.5px;font-weight:400;color:var(--mu);text-align:right;letter-spacing:0}
+.a.ok{color:var(--ok)}
+.se-hero{margin:4px 0 0}
+@media(max-width:959px){.se-cards .v{font-size:clamp(16px,4.8vw,22px)}}
+.bl{border-radius:18px;background:var(--s2);max-height:44vh;overflow:auto;padding:4px 12px;margin-bottom:12px}
+.bl label{display:flex;align-items:center;gap:12px;padding:12px 2px;border-bottom:1px solid var(--bd);font-size:14px;cursor:pointer}.bl label:last-child{border:0}.bl input{width:18px;height:18px;padding:0;accent-color:var(--blue)}.bl label span{flex:1}.bl label.dis{color:var(--mu);cursor:default}
+.pl .row.kb{background:var(--soft)}
+.hk{display:grid;grid-template-columns:1fr auto;gap:8px 14px;font-size:13px;align-items:center;margin:0 0 16px}.hk span:nth-child(even){color:var(--mu)}
+kbd{font:500 11px/1 Inter,sans-serif;padding:3px 6px;border-radius:6px;background:var(--s2);border:1px solid var(--bd);border-bottom-width:2px;color:#59627a}
+
+@media(min-width:960px){
+ .dsk{display:revert!important}nav .dsk{display:flex!important}
+ .mnu{display:none!important}
+ body{padding-left:268px;background:radial-gradient(760px 460px at 100% -8%,rgba(74,155,255,.17),transparent 70%),#f5f7fb;background-attachment:fixed}
+ header{position:sticky;top:0;padding:18px 48px 4px;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;justify-content:flex-end}
+ header .logo{position:fixed;left:26px;top:26px;z-index:12;font-size:18px}
+ nav{width:268px;padding:100px 18px 24px;gap:4px;background:#fff;border:0;border-right:1px solid rgba(17,22,31,.06);box-shadow:none}
+ nav::before{content:"Menu";font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#9aa3b2;padding:0 14px 8px}
+ nav button{border-radius:16px;padding:13px 14px;font-size:14.5px;font-weight:500;color:#4b5568;gap:13px;box-shadow:none}
+ nav button:hover{background:#f2f5fa;color:var(--tx)}
+ nav button.on,nav button.on:hover{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(23,105,224,.26)}
+ nav .plus,nav .plus:hover{order:9;margin-top:auto;width:100%;height:52px;min-height:52px;padding:0 16px;border-radius:18px;font-size:14.5px;font-weight:600;background:var(--tx);color:#fff;box-shadow:0 12px 24px rgba(17,22,31,.18);justify-content:center}
+ nav .plus:hover{background:#000}
+ main{padding:4px 48px 64px;max-width:1380px}
+ h2{font-size:38px;margin-top:0}
+ .card{border-radius:28px}
+ .grid .card{border-radius:26px}
+ #home>.grid .card{display:flex;flex-direction:column;justify-content:space-between;padding:22px 24px}#home>.grid .v{font-size:30px}
+ /* payment form: keyboard first, no quick-amount / recent-name shortcut chips */
+ #qa,#recentEmp{display:none!important}
+ #pay.on{max-width:980px}
+ #payForm{max-width:none;padding:32px 34px 28px;column-gap:28px}
+ #keep{justify-content:flex-start;box-shadow:none;background:var(--s2);border:0;color:#59627a;font-weight:500}
+ /* salary */
+ #sal.on{max-width:980px}
+ header{z-index:10}
+ #salEmp .se{display:grid;grid-template-columns:minmax(0,1fr) 400px;grid-template-rows:auto auto 1fr;column-gap:24px;align-items:start;grid-template-areas:"hero side" "cards side" "rec side"}
+ .se-side{display:block;grid-area:side;position:sticky;top:76px}.se-side>.card{margin:0 0 16px}
+ #salEmp .se>*{margin:0 0 16px}
+ .se-hero{grid-area:hero}.se-cards{grid-area:cards}.se-rec{grid-area:rec}
+ .se-add,.se-setup{padding:24px}
+ #salEmp .se-hero{min-height:0}
+ #pvb{border-radius:0}
+}
 </style></head><body>
+<div id="pvb" hidden><span>Preview copy · shows your live data, but nothing you change here goes to the cloud.</span><button type="button" id="pvReset">Reload live data</button></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-logo" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H17v3"/><path d="M4 7.5V17a2 2 0 0 0 2 2h12a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 18 8H6.5A2.5 2.5 0 0 1 4 7.5Z"/><circle cx="15.5" cy="13.5" r=".6"/></symbol>
 <symbol id="i-home" viewBox="0 0 24 24"><path d="m4 11 8-7 8 7"/><path d="M6 9.5V19h12V9.5M10 19v-5h4v5"/></symbol>
@@ -163,6 +230,7 @@ dialog[open]{animation:sheet .26s cubic-bezier(.2,.8,.2,1)}dialog[open]::backdro
 <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5V9h14v8h-2M7 14h10v6H7z"/></symbol>
 <symbol id="i-send" viewBox="0 0 24 24"><path d="M20 4 10.500 13.500M20 4l-6 16-3.500-6.500L4 10z"/></symbol>
 <symbol id="i-csv" viewBox="0 0 24 24"><path d="M5 5h14v14H5zM5 10h14M10 10v9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H17v3"/><path d="M4 7.5V17a2 2 0 0 0 2 2h12a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 18 8H6.5A2.5 2.5 0 0 1 4 7.5Z"/><path d="M15.5 13.5h.01"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M8 3.5v4M16 3.5v4"/></symbol>
 <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol></defs></svg>
 <header><div class="logo"><i><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="lgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c9cff"/><stop offset=".5" stop-color="#1769e0"/><stop offset="1" stop-color="#082f78"/></linearGradient><radialGradient id="lgh" cx=".85" cy=".05" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".34"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" fill="url(#lgb)"/><rect width="512" height="512" fill="url(#lgh)"/><g transform="translate(256 256) scale(1) translate(-256 -266)"><defs>
 <linearGradient id="lgw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d3e3ff"/></linearGradient>
@@ -176,7 +244,7 @@ dialog[open]{animation:sheet .26s cubic-bezier(.2,.8,.2,1)}dialog[open]::backdro
 <rect x="128" y="206" width="256" height="174" rx="32" fill="none" stroke="#1769e0" stroke-opacity=".16" stroke-width="3" stroke-dasharray="7 9"/>
 <path d="M150 192h212" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
 <rect x="318" y="262" width="116" height="78" rx="39" fill="url(#lgt)"/><rect x="318" y="262" width="116" height="78" rx="39" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
-<circle cx="360" cy="301" r="17" fill="url(#lgc)"/><circle cx="360" cy="301" r="17" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/></g></svg></i>StaffPay</div><button class="gear" id="setBtn" aria-label="Settings"><svg class="ic"><use href="#i-sliders"/></svg></button></header>
+<circle cx="360" cy="301" r="17" fill="url(#lgc)"/><circle cx="360" cy="301" r="17" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/></g></svg></i>StaffPay</div><div class="hbtns"><button class="gear mnu" id="menuBtn" aria-label="Menu"><svg class="ic"><use href="#i-menu"/></svg></button><button class="gear" id="setBtn" aria-label="Settings"><svg class="ic"><use href="#i-sliders"/></svg></button></div></header>
 <main>
 <section class="pg on" id="home">
  <div class="top"><h2 id="hi">Payroll<br><span>overview</span></h2><button class="rb dk" aria-label="New payment" onclick="newPay()"><svg class="ic"><use href="#i-plus"/></svg></button></div>
@@ -209,18 +277,72 @@ dialog[open]{animation:sheet .26s cubic-bezier(.2,.8,.2,1)}dialog[open]::backdro
  <div class="card" id="sRows"></div>
  <div class="two no-print"><button class="btn s" onclick="printStmt()"><svg class="ic"><use href="#i-print"/></svg>Print</button><button class="btn s" onclick="share()"><svg class="ic"><use href="#i-send"/></svg>WhatsApp</button><button class="btn s" onclick="csv()"><svg class="ic"><use href="#i-csv"/></svg>CSV</button></div>
 </section>
+<section class="pg" id="sal">
+ <div class="top"><h2>Salary<br><span>manager</span></h2></div>
+ <p class="sub">Open a person to add their salary, leave or extra. Nothing is added on its own.</p>
+ <div class="hero"><div class="k">Remaining to pay</div><div class="big" id="salTot"></div><span class="chip" id="salChip"></span></div>
+ <input id="salQ" type="search" placeholder="Search staff…" style="margin:16px 0 4px" autocomplete="off"><div class="card" id="salRows"></div>
+</section>
+<section class="pg" id="salEmp">
+ <div class="top"><h2 id="seName"></h2><button class="rb" aria-label="Back" onclick="go('sal')"><svg class="ic"><use href="#i-l"/></svg></button></div>
+ <p class="sub" id="seSub"></p>
+ <div class="se">
+  <div class="hero se-hero"><div class="k" id="seRemK">Remaining to pay</div><div class="big" id="seRem"></div><span class="chip" id="seChip"></span></div>
+  <div class="grid se-cards">
+   <div class="card" style="grid-column:1/-1"><div class="k">Opening balance</div><div class="v" id="seOp"></div></div>
+   <div class="card"><div class="k">Salary added</div><div class="v" id="seAdd"></div></div>
+   <div class="card"><div class="k">Less (leave)</div><div class="v" id="seCut"></div></div>
+   <div class="card"><div class="k">Received</div><div class="v" id="seRecv"></div></div>
+   <div class="card"><div class="k">Expense</div><div class="v" id="seExp"></div></div>
+  </div>
+  <div class="se-side">
+  <form class="card se-add" id="seForm" autocomplete="off" novalidate>
+   <div class="ct"><span id="seFT">Add to record</span><a id="seCancel" hidden>Cancel edit</a></div>
+   <div id="seSeg"><div class="sgl">Salary</div><div class="seg sg4"><button type="button" data-t="salary">Month</button><button type="button" data-t="days">Days</button><button type="button" data-t="extra">Extra</button><button type="button" data-t="cut">Leave</button></div><div class="sgl">Paid to them</div><div class="seg sg2"><button type="button" data-t="recv">Received</button><button type="button" data-t="exp">Expense</button></div></div>
+   <div class="r2">
+    <div class="fld" id="seMonthF"><label>For month</label><input id="seMonth" type="month" data-skip></div>
+    <div class="fld" id="seDaysF"><label id="seDaysL">Days</label><input id="seDays" inputmode="decimal" placeholder="0"></div>
+    <div class="fld"><label>Amount (AED)</label><input id="seAmt" inputmode="decimal" placeholder="0.00"></div>
+    <div class="fld"><label>Date</label><input id="seDate" type="date" data-skip></div>
+   </div>
+   <div class="fld"><label>Note <span style="font-weight:500;color:#a0a8b8">(optional)</span></label><input id="seNote" maxlength="120" placeholder="e.g. 3 days sick leave"></div>
+   <div class="calc" id="seCalc"></div>
+   <button class="btn p" id="seSave" style="width:100%">Add to record</button>
+  </form>
+  <form class="card se-setup" id="setupForm" autocomplete="off" novalidate>
+   <div class="ct">Salary setup</div>
+   <div class="r2">
+    <div class="fld"><label>Monthly salary</label><input id="suSal" inputmode="decimal" placeholder="0.00"></div>
+    <div class="fld"><label>Opening balance</label><input id="suOp" inputmode="decimal" placeholder="0.00"></div>
+   </div>
+   <div class="fld" id="suDateF"><label>Opening balance date</label><input id="suDate" type="date" data-skip></div>
+   <p class="k" id="suHint" style="margin:-6px 0 16px;line-height:1.5"></p>
+   <button class="btn" style="width:100%">Save setup</button>
+  </form>
+  </div>
+  <div class="se-rec">
+   <div class="sh" style="margin-top:0"><h3>Record</h3><a id="sePay">Add received</a></div>
+   <div class="card" id="seRows"></div>
+   <div class="two"><button type="button" class="btn s" onclick="salPrint()"><svg class="ic"><use href="#i-print"/></svg>Print</button><button type="button" class="btn s" onclick="salShare()"><svg class="ic"><use href="#i-send"/></svg>WhatsApp</button></div>
+  </div>
+ </div>
+</section>
 </main>
 <div id="prt"></div>
-<nav><button data-p="home" class="on"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></button><button data-p="staff"><svg class="ic"><use href="#i-users"/></svg><span>Team</span></button><button class="plus" onclick="newPay()" aria-label="New payment"><svg class="ic"><use href="#i-plus"/></svg><span>New payment</span></button><button data-p="stmt"><svg class="ic"><use href="#i-file"/></svg><span>Statements</span></button></nav>
+<nav><button data-p="home" class="on"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></button><button data-p="staff"><svg class="ic"><use href="#i-users"/></svg><span>Team</span></button><button class="plus" onclick="newPay()" aria-label="New payment"><svg class="ic"><use href="#i-plus"/></svg><span>New payment</span></button><button data-p="stmt"><svg class="ic"><use href="#i-file"/></svg><span>Statements</span></button><button data-p="sal" class="dsk"><svg class="ic"><use href="#i-wallet"/></svg><span>Salary</span></button></nav>
 <dialog id="empModal"><form id="empForm"><h3 id="empT">Add employee</h3><input id="empEditId" type="hidden"><div class="fld"><label>Employee name</label><input id="empName" required maxlength="80" placeholder="Enter name"></div><div class="two"><button type="button" class="btn" id="cancelEmp">Cancel</button><button class="btn p" id="empSubmit">Save employee</button></div></form></dialog>
 <dialog id="profSheet"><div id="profB"></div><button type="button" class="btn" style="width:100%;margin-top:14px" onclick="profSheet.close()">Close</button></dialog>
-<dialog id="setSheet"><h3>Settings</h3><div class="fld"><label>Cloud sync</label><div style="display:flex;gap:10px;align-items:center"><span id="sync">Connecting…</span><button type="button" class="btn s" id="syncNow">Sync now</button></div></div><div class="fld"><label>Business name (shown on prints)</label><input id="sBiz" maxlength="60" placeholder="Your company name"></div><div class="fld"><label>Default category</label><select id="sDefCat"></select></div><div class="fld"><label>Payment date</label><select id="sDm"><option value="today">Always today</option><option value="last">Last date I used</option></select></div><div id="tgs"></div><div class="k" id="sBk" style="margin:4px 0 10px"></div><div class="two"><button type="button" class="btn" onclick="expAll()">Backup now</button><button type="button" class="btn p" onclick="setSheet.close()">Done</button></div></dialog>
+<dialog id="setSheet"><h3>Settings</h3><div class="fld"><label>Cloud sync</label><div style="display:flex;gap:10px;align-items:center"><span id="sync">Connecting…</span><button type="button" class="btn s" id="syncNow">Sync now</button></div></div><div class="fld"><label>Business name (shown on prints)</label><input id="sBiz" maxlength="60" placeholder="Your company name"></div><div class="fld"><label>Default category</label><select id="sDefCat"></select></div><div class="fld"><label>Payment date</label><select id="sDm"><option value="today">Always today</option><option value="last">Last date I used</option></select></div><div id="tgs"></div><div class="fld dsk"><label>Keyboard shortcuts</label><div class="hk"><span>New payment</span><span><kbd>N</kbd></span><span>Home · Team · Statements · Salary</span><span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></span><span>Search on this page</span><span><kbd>/</kbd></span><span>Next field · pick name</span><span><kbd>Enter</kbd> <kbd>↑</kbd><kbd>↓</kbd></span><span>Save from any field</span><span><kbd>Ctrl</kbd>+<kbd>Enter</kbd></span><span>Date one day back / forward</span><span><kbd>Alt</kbd>+<kbd>←</kbd><kbd>→</kbd></span><span>Salary entry (on a person’s page)</span><span><kbd>S</kbd></span><span>Print (statement / salary)</span><span><kbd>P</kbd></span><span>Back · close</span><span><kbd>Esc</kbd></span></div></div><div class="k" id="sBk" style="margin:4px 0 10px"></div><div class="two"><button type="button" class="btn" onclick="expAll()">Backup now</button><button type="button" class="btn p" onclick="setSheet.close()">Done</button></div></dialog>
 <dialog id="daySheet"><h3 id="dayT"></h3><div id="dayRows"></div><div class="two" style="margin-top:14px"><button type="button" class="btn" id="dayClose">Close</button><button type="button" class="btn p" id="dayAdd">Add payment</button></div></dialog>
+<div id="drw" hidden><div class="bg"></div><aside class="pn" aria-label="Menu"><div class="logo"></div>
+<button data-dp="home"><svg class="ic"><use href="#i-home"/></svg>Home</button><button data-dp="staff"><svg class="ic"><use href="#i-users"/></svg>Team</button><button data-dp="stmt"><svg class="ic"><use href="#i-file"/></svg>Statements</button><button data-da="pay"><svg class="ic"><use href="#i-plus"/></svg>New payment</button>
+<div class="lbl">Salary</div><button data-dp="sal"><svg class="ic"><use href="#i-wallet"/></svg>Salary manager</button>
+<div class="ft"><button data-da="set"><svg class="ic"><use href="#i-sliders"/></svg>Settings</button></div></aside></div>
 <div id="toast"></div>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
 <script>
-(()=>{const $=id=>document.getElementById(id);window.$=$;let employees=[],payments=[],fdb=null,editing=null,sm=localYM();const KEY="staffpay-working-v1";
+(()=>{const $=id=>document.getElementById(id);window.$=$;let employees=[],payments=[],salary=[],fdb=null,editing=null,sm=localYM();const LIVE_HOSTS=["ziadk7474.github.io"],QS=new URLSearchParams(location.search),PREVIEW=QS.has("live")?false:(QS.has("preview")||!LIVE_HOSTS.includes(location.hostname));const KEY=PREVIEW?"staffpay-preview-v3":"staffpay-working-v1";const cl=o=>JSON.parse(JSON.stringify(o));
 const cfg={apiKey:"AIzaSyAthWw5mGlIzMeIBjaFrkGd_dS8UkaELlE",authDomain:"staffpay-c1c95.firebaseapp.com",databaseURL:"https://staffpay-c1c95-default-rtdb.firebaseio.com",projectId:"staffpay-c1c95",storageBucket:"staffpay-c1c95.firebasestorage.app",messagingSenderId:"972523894348",appId:"1:972523894348:web:6dba637ba1caa0fc88e6e9"};
 const sync=(s,l)=>{$("sync").className=s;$("sync").textContent=l};
 try{firebase.initializeApp(cfg);fdb=firebase.database();sync("","Connecting…")}catch(e){sync("offline","Device only")}
@@ -237,13 +359,15 @@ const norm=s=>String(s||"").toLowerCase().replace(/\s+/g," ").trim();
 const hl=(n,q)=>{q=norm(q);let i=q?n.toLowerCase().indexOf(q):-1;return i<0?esc(n):esc(n.slice(0,i))+"<mark>"+esc(n.slice(i,i+q.length))+"</mark>"+esc(n.slice(i+q.length))};
 function localYM(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")}
 function toast(s,u){let t=$("toast");(document.querySelector("dialog[open]")||document.body).appendChild(t);t.textContent=s;if(u){let b=document.createElement("button");b.textContent="Undo";b.onclick=()=>{u();t.style.display="none"};t.appendChild(b)}t.style.display="block";clearTimeout(t.h);t.h=setTimeout(()=>t.style.display="none",u?6000:2400)}
-const saveLocal=()=>localStorage.setItem(KEY,JSON.stringify({employees,payments}));
-const DK="staffpay-dirty";let first=true;const mergeById=(a,b)=>{let m=new Map(a.map(x=>[x.id,x]));b.forEach(x=>m.set(x.id,x));return[...m.values()]};
+const saveLocal=()=>localStorage.setItem(KEY,JSON.stringify({employees,payments,salary}));
+const DK="staffpay-dirty";let first=true,firstS=true;const mergeById=(a,b)=>{let m=new Map(a.map(x=>[x.id,x]));b.forEach(x=>m.set(x.id,x));return[...m.values()]};
 function persist(){try{saveLocal();localStorage.setItem(DK,"1")}catch(e){toast("Could not save on this device. Storage may be full.");return false}
-if(!fdb){sync("offline","Device only");return true}
+if(PREVIEW){sync("","Preview · not synced");return true}if(!fdb){sync("offline","Device only");return true}
 sync("",navigator.onLine?"Saving…":"Offline · pending");
-fdb.ref("staffpay").set({employees,payments,updatedAt:firebase.database.ServerValue.TIMESTAMP}).then(()=>{try{localStorage.removeItem(DK)}catch(e){}sync("online","Synced")}).catch(()=>{sync("offline","Pending sync");toast("Saved on device. Cloud sync pending.")});return true}
-function load(){try{let d=JSON.parse(localStorage.getItem(KEY)||"{}");employees=d.employees||[];payments=d.payments||[]}catch(e){}
+Promise.all([fdb.ref("staffpay").set({employees:cl(employees),payments:cl(payments),updatedAt:firebase.database.ServerValue.TIMESTAMP}),fdb.ref("staffpaySalary").set({entries:cl(salary),updatedAt:firebase.database.ServerValue.TIMESTAMP})]).then(()=>{try{localStorage.removeItem(DK)}catch(e){}sync("online","Synced")}).catch(()=>{sync("offline","Pending sync");toast("Saved on device. Cloud sync pending.")});return true}
+function load(){try{let d=JSON.parse(localStorage.getItem(KEY)||"{}");employees=d.employees||[];payments=d.payments||[];salary=d.salary||[]}catch(e){}
+if(PREVIEW){pvInit();return}
+if(fdb)fdb.ref("staffpaySalary").on("value",s=>{let d=s.val()||{},r=Object.values(d.entries||{}).filter(Boolean);if(firstS&&localStorage.getItem(DK))salary=mergeById(r,salary);else salary=r;firstS=false;saveLocal();render()},()=>{});
 if(fdb)fdb.ref("staffpay").on("value",s=>{let d=s.val();if(d){let re=Array.isArray(d.employees)?d.employees:Object.values(d.employees||{}),rp=Array.isArray(d.payments)?d.payments:Object.values(d.payments||{});if(first&&localStorage.getItem(DK)){employees=mergeById(re,employees);payments=mergeById(rp,payments);saveLocal();render();persist()}else{employees=re;payments=rp;saveLocal();render()}}first=false;sync("online","Synced")},()=>sync("offline","Device only"))}
 const name=id=>employees.find(e=>e.id===id)?.name||"Employee";
 const sorted=()=>employees.filter(e=>!e.archived).sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:"base"}));
@@ -268,7 +392,7 @@ function render(){
  $("empRows").innerHTML=es.length?es.map(e=>{let c=payments.filter(p=>p.employeeId===e.id);return `<div class="row">${av(e.name)}<div class="m link" onclick="openProf('${e.id}')"><b>${hl(e.name,q)}</b><small>${c.length} payment${c.length==1?"":"s"} · ${money(sum(c.filter(p=>p.date.startsWith(m))))} this month</small></div><button class="ib" aria-label="Edit" onclick="editEmp('${e.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="delEmp('${e.id}')">${ic("trash")}</button></div>`}).join(""):(q?'<div class="empty">No employee matches that search.</div>':'<div class="empty">No employees yet. Add your first one.</div>');
  let ids=[...new Set([...payments].sort((a,b)=>b.date.localeCompare(a.date)).map(p=>p.employeeId))].slice(0,5).filter(i=>employees.some(e=>e.id===i&&!e.archived));
  $("recentEmp").innerHTML=ids.map(i=>`<button type="button" onclick="pick('${i}')">${esc(name(i))}</button>`).join("");
- stmt();if($("daySheet").open)dayRender();if($("profSheet").open)profRender()}
+ stmt();if($("daySheet").open)dayRender();if($("profSheet").open)profRender();salRender()}
 let mode="",curDay=today(),cat="";const CATS=["Salary","Advance","Overtime","Bonus","Deduction","Other"];let splitAll=false;
 const catTag=p=>p.category?" · "+esc(p.category):"";
 const catOK=p=>{let v=$("sCat").value;return !v||(v==="_"?!p.category:p.category===v)};
@@ -291,9 +415,9 @@ $("dayRows").innerHTML=a.length?`<div class="k" style="margin-bottom:6px">${a.le
 window.openDay=d=>{curDay=d||today();dayRender();let sh=$("daySheet");if(!sh.open)sh.showModal()};
 $("bars").onclick=e=>{let b=e.target.closest("[data-d]");if(b)openDay(b.dataset.d)};$("bars").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){let b=e.target.closest("[data-d]");if(b){e.preventDefault();openDay(b.dataset.d)}}};
 $("dayClose").onclick=()=>$("daySheet").close();$("dayAdd").onclick=()=>{newPay();$("payDate").value=curDay};
-window.expAll=()=>{dl("staffpay-backup-"+today()+".json",JSON.stringify({employees,payments}),"application/json");S.lb=Date.now();saveS();setUI();toast("Backup file created.")};
-$("imp").onchange=e=>{let f=e.target.files[0];if(!f)return;f.text().then(t=>{let d=JSON.parse(t);if(!Array.isArray(d.employees)||!Array.isArray(d.payments))throw 0;if(!confirm("Replace current data with this backup?"))return;employees=d.employees;payments=d.payments;persist();render();toast("Backup restored.")}).catch(()=>toast("Invalid backup file."))};
-function go(n){$("daySheet").close();$("profSheet").close();document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===n));document.querySelectorAll("nav [data-p]").forEach(b=>b.classList.toggle("on",b.dataset.p===n));scrollTo(0,0);if(n==="stmt")stmt()}window.go=go;
+window.expAll=()=>{dl("staffpay-backup-"+today()+".json",JSON.stringify({employees,payments,salary}),"application/json");S.lb=Date.now();saveS();setUI();toast("Backup file created.")};
+$("imp").onchange=e=>{let f=e.target.files[0];if(!f)return;f.text().then(t=>{let d=JSON.parse(t);if(!Array.isArray(d.employees)||!Array.isArray(d.payments))throw 0;if(!confirm("Replace current data with this backup?"))return;employees=d.employees;payments=d.payments;salary=Array.isArray(d.salary)?d.salary:[];persist();render();toast("Backup restored.")}).catch(()=>toast("Invalid backup file."))};
+function go(n){$("daySheet").close();$("profSheet").close();document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===n));document.querySelectorAll("nav [data-p]").forEach(b=>b.classList.toggle("on",b.dataset.p===n||(n==="salEmp"&&b.dataset.p==="sal")));scrollTo(0,0);if(n==="stmt")stmt();if(window.closeDrw)closeDrw();if(n==="sal"||n==="salEmp")salRender()}window.go=go;
 document.querySelectorAll("nav [data-p]").forEach(b=>b.onclick=()=>go(b.dataset.p));
 window.openStmt=id=>{mode="m";$("stmtEmp").value=id;$("stmtEmpSearch").value=name(id);go("stmt")};
 $("stmtEmpSearch").oninput=()=>{let e=byName($("stmtEmpSearch").value);$("stmtEmp").value=e?e.id:"";stmt()};
@@ -302,8 +426,8 @@ window.pick=id=>{$("payEmp").value=id;$("payEmpSearch").value=name(id);$("pl").h
 $("q").oninput=render;
 const openEmp=()=>{$("empT").textContent="Add employee";$("empSubmit").textContent="Save employee";$("empEditId").value="";$("empName").value="";$("empModal").showModal();$("empName").focus()};
 window.editEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;$("empT").textContent="Edit employee";$("empSubmit").textContent="Update employee";$("empEditId").value=id;$("empName").value=e.name;$("empModal").showModal()};
-window.delEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;let n=payments.filter(p=>p.employeeId===id).length;
-if(n){if(!confirm(`Archive ${e.name}? Their ${n} payment${n==1?"":"s"} stay in statements and totals. Add the same name again to restore.`))return;e.archived=true;persist();render();return toast("Employee archived.",()=>{e.archived=false;persist();render()})}
+window.delEmp=id=>{let e=employees.find(x=>x.id===id);if(!e)return;let n=payments.filter(p=>p.employeeId===id).length+salary.filter(s=>s.employeeId===id).length;
+if(n){if(!confirm(`Archive ${e.name}? Their ${n} record${n==1?"":"s"} stay in statements and totals. Add the same name again to restore.`))return;e.archived=true;persist();render();return toast("Employee archived.",()=>{e.archived=false;persist();render()})}
 if(!confirm(`Delete ${e.name}? This cannot be undone.`))return;employees=employees.filter(x=>x.id!==id);persist();render();toast("Employee deleted.")};
 $("addInline").onclick=e=>{e.preventDefault();openEmp()};$("addEmpTop").onclick=openEmp;$("cancelEmp").onclick=()=>$("empModal").close();
 $("empForm").onsubmit=e=>{e.preventDefault();let n=$("empName").value.trim(),id=$("empEditId").value;if(!n)return;let dup=employees.find(x=>x.name.toLowerCase()===n.toLowerCase()&&x.id!==id);if(dup&&dup.archived&&!id){dup.archived=false;persist();render();$("empModal").close();pick(dup.id);return toast("Employee restored.")}if(dup)return toast("Employee already exists.");
@@ -352,8 +476,140 @@ let late=S.lb?Date.now()-S.lb>14*864e5:payments.length>0;$("sBk").textContent=S.
 $("tgs").onclick=e=>{let k=e.target.dataset.k;if(k){S[k]=!S[k];saveS();setUI()}};$("keep").onclick=()=>{S.keep=!S.keep;saveS();setUI()};
 $("sBiz").oninput=()=>{S.biz=$("sBiz").value.trim();saveS()};$("sDefCat").onchange=()=>{S.cat=$("sDefCat").value;saveS()};$("sDm").onchange=()=>{S.dm=$("sDm").value;saveS()};
 $("syncNow").onclick=()=>{persist();toast(fdb?(navigator.onLine?"Sending data to the cloud…":"Offline. Data stays on this device."):"Cloud is not available.")};$("setBtn").onclick=()=>{setUI();$("setSheet").showModal()};
+
+/* ===== v2: salary manager (separate setup, optional) ===== */
+const r2=n=>Math.round((Number(n)||0)*100)/100,ym=localYM;
+function num(v){v=String(v??"").replace(/,/g,"").trim();if(!v||!/^[\d.\s+\-*/()]+$/.test(v))return NaN;try{let r=Function('"use strict";return('+v+')')();return isFinite(r)?r2(r):NaN}catch(e){return NaN}}
+const empO=id=>employees.find(e=>e.id===id);
+const rate=e=>e&&+e.salary>0?+e.salary/30:0;
+const tracked=e=>!!e&&(+e.salary>0||!!+e.opening||salary.some(s=>s.employeeId===e.id));
+const mL=m=>new Date(m+"-01T00:00").toLocaleDateString("en-GB",{month:"long",year:"numeric"}),mS=m=>new Date(m+"-01T00:00").toLocaleDateString("en-GB",{month:"short",year:"numeric"});
+const fds=d=>new Date(d+"T00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+function summ(id){let e=empO(id)||{},ss=salary.filter(s=>s.employeeId===id),ps=payments.filter(p=>p.employeeId===id),op=r2(+e.opening||0),add=r2(ss.reduce((t,s)=>t+(s.type==="cut"?0:+s.amount),0)),cut=r2(ss.reduce((t,s)=>t+(s.type==="cut"?+s.amount:0),0)),recv=sum(ps),dd=ded(ps),exp=r2(ps.filter(p=>p.category==="Expense").reduce((t,p)=>t+ +p.amount,0));return{op,add,cut,recv,dd,exp,n:ps.length,rem:r2(op+add-cut-recv-dd),tr:tracked(e)}}
+const dys=d=>d+" day"+(d==1?"":"s");
+function sDesc(s){switch(s.type){case"salary":return"Salary · "+mS(s.month||s.date.slice(0,7));case"days":return"Salary · "+dys(s.days)+(s.month?" ("+mS(s.month)+")":"");case"extra":return"Extra salary"+(s.days?" · "+dys(s.days):"");case"cut":return"Less salary"+(s.days?" · "+dys(s.days)+" leave":"");default:return"Salary"}}
+function ledger(id){let e=empO(id)||{},rows=[];
+ if(+e.opening)rows.push({k:"open",date:e.openingDate||"",d:"Opening balance",plus:e.opening>0?+e.opening:0,minus:e.opening<0?-e.opening:0,ts:-1});
+ salary.filter(s=>s.employeeId===id).forEach(s=>rows.push({k:"sal",ref:s,date:s.date,d:sDesc(s),note:s.note,plus:s.type==="cut"?0:+s.amount,minus:s.type==="cut"?+s.amount:0,ts:s.ts||1}));
+ payments.filter(p=>p.employeeId===id).forEach(p=>rows.push({k:"pay",ref:p,date:p.date,d:p.category==="Deduction"?"Deduction":p.category==="Expense"?"Expense":"Received"+(p.category?" · "+p.category:""),note:p.note,plus:0,minus:+p.amount,ts:p.ts||2}));
+ rows.sort((a,b)=>(a.k==="open"?-1:b.k==="open"?1:0)||a.date.localeCompare(b.date)||a.ts-b.ts);let b=0;rows.forEach(r=>{b=r2(b+r.plus-r.minus);r.bal=b});return rows}
+const remTxt=v=>v<0?"Advance "+n2(-v):n2(v);
+
+let seId="",seT="salary",seEdit=null;
+function salRender(){
+ if($("sal").classList.contains("on")){let act=sorted(),q=norm($("salQ").value),tr=act.filter(tracked),tot=r2(tr.reduce((a,e)=>a+Math.max(summ(e.id).rem,0),0)),due=tr.filter(e=>summ(e.id).rem>0).length;
+  $("salTot").innerHTML="<small>AED</small>"+n2(tot);$("salChip").textContent=tr.length?due+" of "+tr.length+" staff have money due":"Open a person to set their salary";
+  let l=act.filter(e=>norm(e.name).includes(q));
+  $("salRows").innerHTML=l.length?l.map(e=>{let s=summ(e.id),m=sum(payments.filter(p=>p.employeeId===e.id&&p.date.startsWith(ym())));return `<div class="row link" data-se="${e.id}">${av(e.name)}<div class="m"><b>${hl(e.name,q)}</b><small>${+e.salary>0?"Salary "+money(e.salary):"No salary set"} · ${money(m)} paid this month</small></div><div class="a">${s.tr?remTxt(s.rem)+"<small>"+(s.rem<0?"advance":s.rem>0?"remaining":"settled")+"</small>":'<span class="k" style="font-weight:500">Set up</span>'}</div></div>`}).join(""):`<div class="empty">${q?"No employee matches that search.":"No employees yet. Add them in Team first."}</div>`}
+ if($("salEmp").classList.contains("on"))seRender()}
+$("salRows").onclick=e=>{let r=e.target.closest("[data-se]");if(r)openSal(r.dataset.se)};
+$("salQ").oninput=salRender;$("salQ").onkeydown=e=>{if(e.key==="Enter"){let r=$("salRows").querySelector("[data-se]");if(r){e.preventDefault();openSal(r.dataset.se)}}};
+window.openSal=id=>{seId=id;resetSe();go("salEmp");setTimeout(()=>{if(matchMedia("(pointer:fine)").matches)focusSe()},40)};
+function seRender(){let e=empO(seId);if(!e)return go("sal");let s=summ(seId),rt=rate(e),w=e.name.trim().split(/\s+/);
+ $("seName").innerHTML=esc(w[0])+"<br><span>"+esc(w.slice(1).join(" ")||"salary")+"</span>";
+ $("seSub").textContent=+e.salary>0?"Monthly salary "+money(e.salary)+" · 1 day = "+money(rt)+" (salary ÷ 30)":"No monthly salary set yet. Add it in Salary setup below.";
+ $("seRemK").textContent=s.rem<0?"Advance · they owe you":"Remaining to pay";$("seRem").innerHTML="<small>AED</small>"+n2(Math.abs(s.rem));
+ $("seChip").textContent=!s.tr?"Set a salary to start":s.rem>0?"Still to pay":s.rem<0?"Paid more than earned":"All settled";
+ $("seOp").textContent=money(s.op);$("seAdd").textContent=money(s.add);$("seCut").textContent=money(s.cut);$("seRecv").textContent=money(r2(s.recv-s.exp+s.dd));$("seExp").textContent=money(s.exp);
+ let rows=ledger(seId),t=today(),last="",h="";
+ [...rows].reverse().forEach(r=>{let btn=r.k==="pay"?`<button class="ib" aria-label="Edit" onclick="${r.ref.category==="Deduction"?"editPay":"seEditP"}('${r.ref.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="delPay('${r.ref.id}')">${ic("trash")}</button>`:r.k==="sal"?`<button class="ib" aria-label="Edit" onclick="seEditE('${r.ref.id}')">${ic("edit")}</button><button class="ib d" aria-label="Delete" onclick="seDel('${r.ref.id}')">${ic("trash")}</button>`:`<button class="ib" aria-label="Edit" onclick="suFocus()">${ic("edit")}</button>`;
+  let dk=r.date||"";if(dk!==last){h+=`<div class="day">${!dk?"Opening":dk===t?"Today":fd(dk)}</div>`;last=dk}
+  h+=`<div class="row"${r.ref&&r.ref.id===seEdit?' style="background:var(--soft);border-radius:14px"':""}><div class="m"><b>${esc(r.d)}</b><small>${r.note?esc(r.note):(r.k==="pay"?"Payment":r.k==="open"?"Before records":"Salary")}</small></div><div class="a ${r.plus?"ok":""}">${r.plus?"+"+n2(r.plus):"−"+n2(r.minus)}<small>bal ${n2(r.bal)}</small></div>${btn}</div>`});
+ $("seRows").innerHTML=h||'<div class="empty">Nothing here yet. Add salary above, or a payment with +.</div>';
+ if(!$("setupForm").contains(document.activeElement)){$("suSal").value=+e.salary>0?e.salary:"";$("suOp").value=+e.opening?e.opening:"";$("suDate").value=e.openingDate||today();suHint()}
+ seCalc()}
+// type switch
+function setT(t){seT=t;if(!seEdit)$("seSave").textContent=t==="recv"?"Save received":t==="exp"?"Save expense":"Add to record";document.querySelectorAll("#seSeg button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));let e=empO(seId);
+ const pay=t==="recv"||t==="exp";$("seMonthF").hidden=!(t==="salary"||t==="days");$("seDaysF").hidden=t==="salary"||pay;$("seDaysL").textContent=t==="days"?"Days worked":t==="cut"?"Leave days":"Extra days (optional)";
+ $("seNote").placeholder=t==="cut"?"e.g. 3 days sick leave":t==="extra"?"e.g. Friday duty":t==="recv"?"e.g. cash, advance":t==="exp"?"e.g. ticket, food, visa":"optional";
+ $("seAmt").toggleAttribute("data-skip",t!=="extra"&&!pay&&rate(e)>0);if(!seEdit){$("seAmt").dataset.auto="1";autoAmt()}seCalc()}
+$("seSeg").onclick=e=>{let b=e.target.closest("[data-t]");if(!b)return;if(seEdit&&isPayT(b.dataset.t)!==isPayT(seT))return toast("Cancel the edit first to change this to another kind of entry.");setT(b.dataset.t);focusSe()};
+function autoAmt(){if($("seAmt").dataset.auto!=="1")return;let e=empO(seId),rt=rate(e),d=num($("seDays").value);
+ if(seT==="salary")$("seAmt").value=e&&+e.salary>0?r2(e.salary):"";else if(seT==="recv"||seT==="exp")$("seAmt").value="";else if(d>0&&rt)$("seAmt").value=r2(rt*d);else if(seT!=="extra")$("seAmt").value=""}
+const isPayT=t=>t==="recv"||t==="exp";
+const dupS=(id,m)=>salary.some(s=>s.employeeId===id&&s.type==="salary"&&s.month===m&&s.id!==seEdit);
+function seCalc(){let e=empO(seId);if(!e)return;let rt=rate(e),d=num($("seDays").value),a=num($("seAmt").value),s=summ(seId),c=$("seCalc"),h="";c.classList.remove("warn");
+ if(isPayT(seT))h=seT==="exp"?"Money you spent for "+esc(e.name)+". It counts as paid to them.":"Money "+esc(e.name)+" received from you.";
+ else if(!(+e.salary>0)&&seT!=="extra"){c.classList.add("warn");h="No monthly salary set. Type the amount yourself, or save a salary in Salary setup and days will work out on their own."}
+ else if(seT==="salary"){h=`Adds <b>${money(e.salary)}</b> for <b>${mL($("seMonth").value||ym())}</b>.`;if(dupS(seId,$("seMonth").value||ym())){c.classList.add("warn");h+="<br>Salary for this month is already added."}}
+ else if(d>0&&rt)h=`${dys(d)} × ${money(rt)} = <b>${money(r2(d*rt))}</b> ${seT==="cut"?"less from":"added to"} salary.`;
+ else h=seT==="cut"?"Type leave days. 1 day = salary ÷ 30 = "+money(rt)+".":seT==="days"?"Type days worked, for when they did not work the full month.":"Type an amount, or days to work it out.";
+ if(a>0){let os=seEdit?salary.find(x=>x.id===seEdit):null,op=seEdit?payments.find(x=>x.id===seEdit):null,od=os?(os.type==="cut"?-os.amount:+os.amount):op?-op.amount:0;h+=`<br>Remaining after this: <b>${remTxt(r2(s.rem-od+(seT==="cut"||isPayT(seT)?-a:a)))}</b>`}
+ c.innerHTML=h}
+$("seDays").oninput=()=>{$("seAmt").dataset.auto="1";autoAmt();seCalc()};$("seAmt").oninput=()=>{$("seAmt").dataset.auto="0";seCalc()};$("seMonth").oninput=seCalc;$("seMonth").onchange=seCalc;
+function resetSe(){seEdit=null;$("seForm").reset();$("seMonth").value=ym();$("seDate").value=today();$("seFT").textContent="Add to record";$("seCancel").hidden=true;setT(seT==="salary"&&seId&&dupS(seId,ym())?"cut":seT)}
+function focusSe(){let f=[...$("seForm").querySelectorAll("input")].find(x=>x.offsetParent!==null&&!x.hasAttribute("data-skip"));if(f){f.focus();f.select&&f.select()}}
+$("seCancel").onclick=()=>{resetSe();seRender()};
+window.seEditE=id=>{let s=salary.find(x=>x.id===id);if(!s)return;seEdit=id;setT(s.type);$("seMonth").value=s.month||s.date.slice(0,7);$("seDays").value=s.days||"";$("seAmt").value=s.amount;$("seAmt").dataset.auto="0";$("seDate").value=s.date;$("seNote").value=s.note||"";$("seFT").textContent="Edit salary entry";$("seSave").textContent="Update";$("seCancel").hidden=false;seRender();$("seForm").scrollIntoView({behavior:"smooth",block:"center"});focusSe()};
+window.seEditP=id=>{let p=payments.find(x=>x.id===id);if(!p)return;seEdit=id;setT(p.category==="Expense"?"exp":"recv");$("seAmt").value=p.amount;$("seAmt").dataset.auto="0";$("seDate").value=p.date;$("seNote").value=p.note||"";$("seFT").textContent=p.category==="Expense"?"Edit expense":"Edit received";$("seSave").textContent="Update";$("seCancel").hidden=false;seRender();$("seForm").scrollIntoView({behavior:"smooth",block:"center"});focusSe()};
+window.seDel=id=>{let i=salary.findIndex(s=>s.id===id);if(i<0)return;if(S.cd&&!confirm("Delete this salary entry?"))return;let[s]=salary.splice(i,1);if(seEdit===id)resetSe();persist();render();toast("Salary entry deleted.",()=>{salary.splice(Math.min(i,salary.length),0,s);persist();render();toast("Restored.")})};
+$("seForm").onsubmit=ev=>{ev.preventDefault();let e=empO(seId);if(!e)return;let a=num($("seAmt").value),d=num($("seDays").value),m=$("seMonth").value||ym(),date=$("seDate").value||today(),note=$("seNote").value.trim();
+ if(isPayT(seT)){if(!(a>0)){toast("Enter an amount above 0.");return $("seAmt").focus()}
+  let was=seEdit&&payments.find(x=>x.id===seEdit),rec={employeeId:seId,employeeName:e.name,date,amount:a,note};
+  if(seT==="exp")rec.category="Expense";else if(was&&was.category&&was.category!=="Expense")rec.category=was.category;
+  if(was){delete was.category;Object.assign(was,rec)}else payments.push({id:uid(),...rec,ts:Date.now()});
+  persist();toast(was?"Entry updated.":seT==="exp"?"Expense "+money(a)+" saved for "+e.name+".":money(a)+" received by "+e.name+".");if(navigator.vibrate)navigator.vibrate(10);
+  S.ld=date;saveS();resetSe();render();if(matchMedia("(pointer:fine)").matches)focusSe();return}
+ if((seT==="days"||seT==="cut")&&!(d>0)&&!(a>0)){toast("Type the number of days.");return $("seDays").focus()}
+ if(!(a>0)){toast("Enter an amount above 0.");return $("seAmt").focus()}
+ if(seT==="salary"&&dupS(seId,m)&&!confirm(`Salary for ${mL(m)} is already added for ${e.name}. Add it again?`))return;
+ let rec={employeeId:seId,type:seT,date,amount:a};if(seT==="salary"||seT==="days")rec.month=m;if(seT!=="salary"&&d>0){rec.days=d;if(rate(e))rec.rate=r2(rate(e))}if(note)rec.note=note;
+ let was=seEdit;if(was){let x=salary.find(s=>s.id===was);if(x){["month","days","rate","note"].forEach(k=>delete x[k]);Object.assign(x,rec)}}else salary.push({id:uid(),...rec,ts:Date.now()});
+ persist();toast(was?"Salary entry updated.":seT==="cut"?money(a)+" less from "+e.name+"'s salary.":money(a)+" added to "+e.name+"'s salary.");if(navigator.vibrate)navigator.vibrate(10);
+ resetSe();render();if(matchMedia("(pointer:fine)").matches)focusSe()};
+// setup (monthly salary + opening balance)
+function suHint(){let s=num($("suSal").value),o=num($("suOp").value),h=[];if(s>0)h.push("1 day = "+money(r2(s/30))+".");if(o>0)h.push("Opening: you owe them "+money(o)+".");else if(o<0)h.push("Opening: they owe you "+money(-o)+".");if(!h.length)h.push("Both are optional. Opening balance is what was left before you started here. Use minus if they owe you.");$("suHint").textContent=h.join(" ");$("suDateF").hidden=!o}
+$("suSal").oninput=suHint;$("suOp").oninput=suHint;
+window.suFocus=()=>{$("setupForm").scrollIntoView({behavior:"smooth",block:"center"});$("suOp").focus()};
+$("setupForm").onsubmit=ev=>{ev.preventDefault();let e=empO(seId);if(!e)return;let sv=$("suSal").value.trim(),ov=$("suOp").value.trim(),s=num(sv),o=num(ov);
+ if(sv&&!(s>=0)){toast("Salary is not a valid number.");return $("suSal").focus()}if(ov&&isNaN(o)){toast("Opening balance is not a valid number.");return $("suOp").focus()}
+ if(s>0)e.salary=s;else delete e.salary;if(o){e.opening=o;e.openingDate=$("suDate").value||today()}else{delete e.opening;delete e.openingDate}
+ persist();document.activeElement.blur();render();toast("Salary setup saved.")};
+$("sePay").onclick=()=>{resetSe();setT("recv");$("seForm").scrollIntoView({behavior:"smooth",block:"center"});focusSe()};
+// print + share
+window.salPrint=()=>{let e=empO(seId),rows=ledger(seId),s=summ(seId);if(!rows.length)return toast("Nothing to print yet.");
+ doPrint(hd("Salary record","Generated "+new Date().toLocaleString("en-GB"))+`<div class="pm"><div><span>Employee</span>${esc(e.name)}</div><div><span>Monthly salary</span>${+e.salary>0?"AED "+n2(e.salary):"—"}</div><div><span>1 day (÷30)</span>${+e.salary>0?"AED "+n2(rate(e)):"—"}</div></div><table><thead><tr><th>Date</th><th>Details</th><th class="r">Added</th><th class="r">Less</th><th class="r">Balance</th></tr></thead><tbody>`+rows.map(r=>`<tr><td>${r.date?fdl(r.date):"—"}</td><td>${esc(r.d)}${r.note?" — "+esc(r.note):""}</td><td class="r">${r.plus?n2(r.plus):""}</td><td class="r">${r.minus?n2(r.minus):""}</td><td class="r">${n2(r.bal)}</td></tr>`).join("")+`</tbody></table><div class="tot"><div><span>Opening balance</span><span>${n2(s.op)}</span></div><div><span>Salary added</span><span>${n2(s.add)}</span></div>${s.cut?`<div><span>Less (leave)</span><span>−${n2(s.cut)}</span></div>`:""}<div><span>Received</span><span>−${n2(s.recv+s.dd)}</span></div><div class="g"><span>${s.rem<0?"Advance (AED)":"Remaining (AED)"}</span><span>${n2(Math.abs(s.rem))}</span></div></div>${sg}`)};
+window.salShare=()=>{let e=empO(seId),s=summ(seId),m=ym(),rows=ledger(seId).filter(r=>r.date&&r.date.startsWith(m));let w=open("https://wa.me/?text="+encodeURIComponent(`*${e.name} – salary*\n`+(+e.salary>0?`Monthly salary: ${money(e.salary)}\n`:"")+(s.op?`Opening: ${n2(s.op)}\n`:"")+`Salary added: ${n2(r2(s.add-s.cut))}\nReceived: ${n2(r2(s.recv+s.dd))}\n`+(rows.length?`\n_${mL(m)}_\n`+rows.map(r=>`${fds(r.date)}  ${r.d}  ${r.plus?"+"+n2(r.plus):"−"+n2(r.minus)}`).join("\n")+"\n":"")+`\n*${s.rem<0?"Advance":"Remaining"}: ${money(Math.abs(s.rem))}*`));if(!w)toast("Pop-up blocked. Allow pop-ups to share.")};
+
+if(!$("sCat").querySelector("option[value=Expense]"))$("sCat").querySelector("option[value=_]").insertAdjacentHTML("beforebegin",'<option value="Expense">Expense</option>');
+/* ===== Enter moves to the next field in the salary forms ===== */
+function enterFlow(f){f.addEventListener("keydown",e=>{if(e.key!=="Enter"||e.ctrlKey||e.metaKey||e.altKey||e.target.tagName==="BUTTON")return;let all=[...f.querySelectorAll("input,select")].filter(x=>x.type!=="hidden"&&x.offsetParent!==null&&!x.disabled),i=all.indexOf(e.target);if(i<0)return;e.preventDefault();if(e.shiftKey){if(i>0)all[i-1].focus();return}let rest=all.slice(i+1).filter(x=>!x.hasAttribute("data-skip"));if(rest.length){rest[0].focus();if(rest[0].select&&!/date|month/.test(rest[0].type))rest[0].select()}else f.requestSubmit()})}
+enterFlow($("seForm"));enterFlow($("setupForm"));
+
+/* ===== side menu (phone + tablet) ===== */
+const drw=$("drw");drw.querySelector(".logo").innerHTML=document.querySelector("header .logo").innerHTML;
+const curPg=()=>(document.querySelector(".pg.on")||{}).id;
+function drwSync(){let p=curPg();drw.querySelectorAll("[data-dp]").forEach(b=>b.classList.toggle("on",b.dataset.dp===p||(p==="salEmp"&&b.dataset.dp==="sal")))}
+window.closeDrw=()=>{drw.hidden=true};$("menuBtn").onclick=()=>{drwSync();drw.hidden=false};drw.querySelector(".bg").onclick=closeDrw;
+drw.onclick=e=>{let b=e.target.closest("[data-dp],[data-da]");if(!b)return;closeDrw();let p=b.dataset.dp,a=b.dataset.da;if(p)go(p);else if(a==="pay")np();else if(a==="set")$("setBtn").click()};
+
+/* ===== keyboard (PC) ===== */
+const FINE=matchMedia("(pointer:fine)").matches;
+const np=()=>{newPay();if(FINE)setTimeout(()=>$("payEmpSearch").focus(),30)};window.newPay=np;
+if(FINE){let ki=-1;
+ $("payEmpSearch").addEventListener("input",()=>ki=-1);
+ $("payEmpSearch").addEventListener("keydown",e=>{let rows=[...$("pl").querySelectorAll("[data-id]")];
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if($("pl").hidden){plRender();rows=[...$("pl").querySelectorAll("[data-id]")]}if(!rows.length)return;ki=(ki+(e.key==="ArrowDown"?1:-1)+rows.length)%rows.length;rows.forEach((r,i)=>r.classList.toggle("kb",i===ki));rows[ki].scrollIntoView({block:"nearest"})}
+  else if(e.key==="Enter"&&!e.ctrlKey&&!e.metaKey){if(!$("pl").hidden&&rows.length&&(ki>=0||!$("payEmp").value)){e.preventDefault();e.stopImmediatePropagation();pick((rows[ki]||rows[0]).dataset.id);ki=-1;$("payAmount").focus()}else if($("payEmp").value){e.preventDefault();e.stopImmediatePropagation();$("pl").hidden=true;$("payAmount").focus()}}
+  else if(e.key==="Escape"&&!$("pl").hidden){e.preventDefault();e.stopPropagation();$("pl").hidden=true}},true);
+ $("payAmount").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.ctrlKey&&!e.metaKey){e.preventDefault();$("payNote").focus()}});
+}
+document.addEventListener("keydown",e=>{let a=document.activeElement,k=e.key,mod=e.ctrlKey||e.metaKey,dlg=document.querySelector("dialog[open]"),typing=a&&/^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)&&a.type!=="checkbox",p=curPg();
+ if(mod&&(k==="Enter"||k.toLowerCase()==="s")){let f=a&&a.closest&&a.closest("form")||(dlg?dlg.querySelector("form"):null)||(p==="pay"?$("payForm"):p==="salEmp"?$("seForm"):null);e.preventDefault();if(f)f.requestSubmit();return}
+ if(e.altKey&&!mod&&(k==="ArrowLeft"||k==="ArrowRight")){let d=p==="pay"?$("payDate"):p==="salEmp"?$("seDate"):null;if(d&&!dlg){e.preventDefault();let x=new Date((d.value||today())+"T00:00");x.setDate(x.getDate()+(k==="ArrowLeft"?-1:1));d.value=x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");toast("Date: "+fd(d.value))}return}
+ if(k==="Escape"&&!dlg){if(!drw.hidden){closeDrw();return}if(typing&&a.value){a.blur();return}if(typing)a.blur();if(seEdit){resetSe();seRender();return}if(p==="salEmp")go("sal");else if(p==="pay")$("payCancel").click();else if(p!=="home")go("home");return}
+ if(typing||dlg||mod||e.altKey)return;
+ let h={n:()=>{if(p==="salEmp")$("sePay").click();else np()},"+":()=>np(),"1":()=>go("home"),"2":()=>go("staff"),"3":()=>go("stmt"),"4":()=>{go("sal");$("salQ").focus()},
+  s:()=>{if(p==="salEmp")focusSe();else go("sal")},"/":()=>{let i=p==="staff"?$("q"):p==="stmt"?$("stmtEmpSearch"):p==="sal"?$("salQ"):null;if(!i){go("sal");i=$("salQ")}i.focus()},
+  p:()=>{if(p==="salEmp")salPrint();else if(p==="stmt")printStmt()},"?":()=>$("setBtn").click()}[k.length===1?k.toLowerCase():k];
+ if(h){e.preventDefault();h()}});
+
+/* ===== preview copy: shows live data once, never writes to the cloud ===== */
+function pvInit(){$("pvb").hidden=false;sync("","Preview · not synced");if(fdb&&!localStorage.getItem(KEY)){sync("","Loading live data…");Promise.all([fdb.ref("staffpay").once("value"),fdb.ref("staffpaySalary").once("value")]).then(([a,b])=>{let d=a.val()||{},x=b.val()||{};const A=v=>Object.values(v||{}).filter(Boolean);employees=A(d.employees);payments=A(d.payments);salary=A(x.entries);saveLocal();render();sync("","Preview · not synced");toast("Live data loaded into the preview.")}).catch(()=>sync("offline","Preview · offline"))}}
+$("pvReset").onclick=()=>{if(!confirm("Throw away preview changes and load the live data again?"))return;try{localStorage.removeItem(KEY)}catch(e){}employees=[];payments=[];salary=[];render();pvInit()};
+
 setUI();load();render();setUI();
 })();
 </script>
-<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));</script>
+<script>if(location.protocol.startsWith("http")&&"serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));</script>
 </body></html>

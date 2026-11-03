@@ -1,4 +1,4 @@
-const CACHE_NAME = "staffpay-v3";
+const CACHE_NAME = "staffpay-v4";
 
 const FILES_TO_CACHE = [
   "./",
